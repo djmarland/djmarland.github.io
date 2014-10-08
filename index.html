@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>David Jonathan Marland | Web developer</title>
+        <meta name="description" content="Semantic, progressive, responsive and responsible Web developer with skills in HTML, CSS, JavaScript &amp; PHP">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="msapplication-square150x150logo" content="/apple-touch-icon-precomposed.png" />
+        <link rel="icon" sizes="196x196" href="/apple-touch-icon-precomposed.png" />
+        <style>
+            @-webkit-keyframes spectrum {
+                0%   {   background-color: #7ad88a;}
+                25%  {   background-color: #89b9fc;}
+                50%  {   background-color: #e6192b;}
+                75%  {   background-color: #f6f90b;}
+                100% {   background-color: #7ad88a;}
+            }
+            @keyframes spectrum {
+                0%   {   background-color: #7ad88a;}
+                25%  {   background-color: #89b9fc;}
+                50%  {   background-color: #e6192b;}
+                75%  {   background-color: #f6f90b;}
+                100% {   background-color: #7ad88a;}
+            }
+            html {
+                min-height: 100%;
+                background: #2c2c2c;
+                background: #2c2c2c repeating-radial-gradient(
+                  circle,
+                  rgba(51,51,51,0.97),
+                  rgba(51,51,51,0.97) 16px,
+                  rgba(51,51,51,0.94) 16px,
+                  rgba(51,51,51,0.94) 32px
+                );
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                color: #ddd;
+                background-attachment: fixed;
+                -webkit-animation-name: spectrum;
+                -webkit-animation-duration: 30s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+                animation-name: spectrum;
+                animation-duration: 30s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            body {
+                padding: 24px;
+                font-family: sans-serif;
+            }
+            a {
+                color: inherit;
+            }
+            h1 {
+                font-weight: lighter;
+                font-size: 2.4em;
+                display: block;
+            }
+            .header {
+                max-width: 976px;
+                margin: 0 auto 24px;
+                text-align: center;
+                overflow: auto;
+            }
+            img {
+                max-width: 100%;
+                border-radius: 100% 50%;
+            }
+            .content {
+                max-width: 976px;
+                margin: 0 auto;
+                font-size: 1.2em;
+                line-height: 1.4;
+                clear: both;
+                text-align: center;
+            }
+            ul {
+                padding: 0;
+                list-style: none;
+            }
+            h2 {
+                margin: 0;
+                font-size: 1.2em;
+                font-weight: lighter;
+            }
+            .content__group:after,
+            .content__group:first-child:before {
+                content: ' ';
+                display: block;
+                margin: 12px auto;
+                width: 100%;
+                max-width: 420px;
+                border-bottom: solid 1px #999;
+            }
+            li {
+                display: inline;
+                padding: 0 6px;
+            }
+            @media all and (min-width: 63em) {
+                .header {
+                    margin-top: 24px;
+                    margin-bottom: 48px;
+                    text-align: left;
+                }
+                h1 {
+                    text-align: left;
+                    display: inline;
+                    font-size: 3.4em;
+                    vertical-align: middle;
+                    margin:0 24px;
+                }
+                img {
+                    text-align: right;
+                    display: inline;
+                    vertical-align: middle;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header">
+            <h1>David Jonathan Marland</h1>
+            <img src="/profile.jpg" alt="Photo of me wearing a bow tie" />
+            </div>
+        </header>
+        <section>
+            <div class="content">
+                <div class="content__group">
+                    <h2>Semantic, progressive, responsive and responsible Web developer</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                <div class="content__group">
+                    <h2>Current employment</h2>
+                    <p>Technical Lead, <a href="http://www.bbc.co.uk/programmes">BBC Programmes</a><br />
+                        London, UK<br />
+                        <a href="http://www.bbc.co.uk/blogs/internet/posts/BBC-Programme-Pages-Content-Driven-Responsive-Redesign">More info</a><br />
+                        <a href="http://www.smashingmagazine.com/2014/05/02/responsive-design-begins-with-the-url/">Responsive Design Begins With The URL</a></p>
+                </div>
+                <div class="content__group">
+                    <h2>Contact me</h2>
+                    <ul>
+                        <li id="twitter"><a href="http://www.twitter.com/djmarland" title="Twitter (@djmarland)">Twitter</a></li>
+                        <li id="linkedin"><a href="http://uk.linkedin.com/pub/david-marland/52/76/5b5" title="Linked In">Linked In</a></li>
+                        <li id="email"><a href="mailto:davidm@rland.me.uk" title="E-mail">E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+         <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-24417125-1');ga('send','pageview');
+        </script>
+    </body>
+</html>

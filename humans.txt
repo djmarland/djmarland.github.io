@@ -1,0 +1,30 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    David Marland -- Designer -- @djmarland
+    David Marland -- Developer -- @djmarland
+    David Marland -- Deployer -- @djmarland
+    David Marland -- Manager -- @djmarland
+    David Marland -- Linker -- @djmarland
+    David Marland -- Thinker -- @djmarland
+    David Marland -- Drinker -- @djmarland
+    David Marland -- SEO consultant -- @djmarland
+    David Marland -- Accessibility manager -- @djmarland
+    David Marland -- Financial officer -- @djmarland
+    David Marland -- Cleaner -- @djmarland
+    David Marland -- In case you didn't realise this was my personal website -- @djmarland
+    David Marland -- Master of stating the obvious -- @djmarland
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, HTML5 boilerplate
+
+# NOTES
+
+    This website is supposed to be as small as I can make it.
+    It uses few classes as there is only one of most elements
+    It won't look the same in every (old) browser, but that is intentional.
+    If you support the fancy stuff, you'll get the fancy stuff.
+    I'm not even using normalize, so it's definitely different in every browser.

@@ -9,13 +9,100 @@
         <meta name="msapplication-square150x150logo" content="/apple-touch-icon-precomposed.png" />
         <link rel="icon" sizes="196x196" href="/apple-touch-icon-precomposed.png" />
         <style>
-
-        body {
-        	background: red;
-        }
+            html {
+                min-height: 100%;
+                background: #e6192b;
+                background: #e6192b repeating-radial-gradient(
+                  circle,
+                  rgba(31,31,31,0.97),
+                  rgba(31,31,31,0.97) 16px,
+                  rgba(31,31,31,0.94) 16px,
+                  rgba(31,31,31,0.94) 32px
+                );
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                color: #ddd;
+                background-attachment: fixed;
+            }
+            body {
+                padding: 24px;
+                font-family: sans-serif;
+            }
+            a {
+                color: inherit;
+            }
+            h1 {
+                font-weight: lighter;
+                font-size: 2.4em;
+                display: block;
+            }
+            .header {
+                max-width: 976px;
+                margin: 0 auto 24px;
+                text-align: center;
+                overflow: auto;
+            }
+            img {
+                max-width: 100%;
+                border-radius: 100% 50%;
+            }
+            .content {
+                max-width: 976px;
+                margin: 0 auto;
+                font-size: 1.2em;
+                line-height: 1.4;
+                clear: both;
+                text-align: center;
+            }
+            ul {
+                padding: 0;
+                list-style: none;
+            }
+            h2 {
+                margin: 0;
+                font-size: 1.2em;
+                font-weight: lighter;
+            }
+            .content__group:after,
+            .content__group:first-child:before {
+                content: ' ';
+                display: block;
+                margin: 12px auto;
+                width: 100%;
+                max-width: 420px;
+                border-bottom: solid 1px #999;
+            }
+            li {
+                display: inline;
+                padding: 0 6px;
+            }
+            @media all and (min-width: 63em) {
+                .header {
+                    margin-top: 24px;
+                    margin-bottom: 48px;
+                    text-align: left;
+                }
+                h1 {
+                    text-align: left;
+                    display: inline;
+                    font-size: 3.4em;
+                    vertical-align: middle;
+                    margin:0 24px;
+                }
+                img {
+                    text-align: right;
+                    display: inline;
+                    vertical-align: middle;
+                }
+            }
         </style>
     </head>
     <body>
-    	HEADER
-
-    	<div class="container">
+    	<header>
+            <div class="header">
+            <h1>David Jonathan Marland</h1>
+            <img src="/assets/img/profile.jpg" alt="Photo of me wearing a bow tie" />
+            </div>
+        </header>
+        <section>
+            <div class="content">

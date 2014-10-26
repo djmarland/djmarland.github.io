@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Cross browser alpha transparent background CSS (rgba)"
-tagline: "Supporting tagline"
 ---
 
 

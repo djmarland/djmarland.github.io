@@ -10,7 +10,10 @@
         <link rel="icon" sizes="196x196" href="/apple-touch-icon-precomposed.png" />
         <style>
             html {
-                min-height: 100%;
+                background: #E8E8E8;
+                color: #444;
+            }
+            .header-wrap {
                 background: #e6192b;
                 background: #e6192b repeating-radial-gradient(
                   circle,
@@ -23,73 +26,60 @@
                 background-repeat: no-repeat;
                 color: #ddd;
                 background-attachment: fixed;
-            }
-            body {
-                padding: 24px;
+                padding: 12px 0;
                 font-family: sans-serif;
             }
-            a {
-                color: inherit;
+
+            .header {
+                max-width: 976px;
+                margin: 0 auto;
+                text-align: center;
+                overflow: auto;
             }
-            h1 {
+            .header__text {
                 font-weight: lighter;
                 font-size: 2.4em;
                 display: block;
             }
-            .header {
-                max-width: 976px;
-                margin: 0 auto 24px;
-                text-align: center;
-                overflow: auto;
+            .header__link {
+                text-decoration: none;
             }
-            img {
-                max-width: 100%;
+            .header__img {
+                width: 100px;
+                float: right;
                 border-radius: 100% 50%;
+            }
+            .content-wrap {
+                position: relative;
+                margin-top: 24px;
             }
             .content {
                 max-width: 976px;
                 margin: 0 auto;
-                font-size: 1.2em;
-                line-height: 1.4;
                 clear: both;
-                text-align: center;
             }
-            ul {
-                padding: 0;
-                list-style: none;
+            .article-meta {
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+                border-bottom: solid 1px #717171;
             }
-            h2 {
+            h1 {
                 margin: 0;
-                font-size: 1.2em;
-                font-weight: lighter;
-            }
-            .content__group:after,
-            .content__group:first-child:before {
-                content: ' ';
-                display: block;
-                margin: 12px auto;
-                width: 100%;
-                max-width: 420px;
-                border-bottom: solid 1px #999;
-            }
-            li {
-                display: inline;
-                padding: 0 6px;
             }
             @media all and (min-width: 63em) {
-                .header {
+                .header-wrap {
                     margin-top: 24px;
                     margin-bottom: 48px;
                     text-align: left;
                 }
-                h1 {
+                .header__text {
                     text-align: left;
                     display: inline;
                     font-size: 3.4em;
                     vertical-align: middle;
-                    margin:0 24px;
+                    line-height: 100px;
                 }
-                img {
+                .header__img {
                     text-align: right;
                     display: inline;
                     vertical-align: middle;
@@ -99,10 +89,12 @@
     </head>
     <body>
     	<header>
-            <div class="header">
-            <h1>David Jonathan Marland</h1>
-            <img src="/assets/img/profile.jpg" alt="Photo of me wearing a bow tie" />
+            <div class="header-wrap">
+                <div class="header">
+                <p class="header__text"><a class="header__link" href="/">David Jonathan Marland</a></p>
+                <img class="header__img" src="/assets/img/profile.jpg" alt="Photo of me wearing a bow tie" />
+                </div>
             </div>
         </header>
-        <section>
+        <div class="content-wrap">
             <div class="content">

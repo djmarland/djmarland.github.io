@@ -3,21 +3,18 @@ layout: post
 ---
 
 {% include header.html %}
-<div class="page-header">
-  <h1>POST: {{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
-</div>
-
-<div class="row-fluid post-full">
-  <div class="span12">
-    <div class="date">
-      <span>{{ page.date | date_to_long_string }}</span>
-    </div>
-    <div class="content">
-      {{ content }}
-    </div>  
-
-    <hr>
-    <div class="pagination">
+<article>
+  <div class="article-meta">
+    <h1 class="article-title">{{ page.title }}<h1>
+    {% if page.tagline %}<small class="article-tagline">{{page.tagline}}</small>{% endif %}
+    <p class="article-date">{{ page.date | date_to_long_string }}</p>
+  </div>
+  <div class="article-content">
+    {{ content }}
+  </div>  
+</article>
+<aside>
+  <div class="pagination">
       <ul>
       {% if page.previous %}
         <li class="prev"><a href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
@@ -32,6 +29,6 @@ layout: post
       {% endif %}
       </ul>
     </div>
-  </div>
-</div>
+</aside>
+
 {% include footer.html %}

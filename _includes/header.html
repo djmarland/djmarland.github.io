@@ -38,8 +38,8 @@
 
             .header {
                 max-width: 976px;
+                padding: 0 6px;
                 margin: 0 auto;
-                text-align: center;
                 overflow: auto;
                 font-family: 'Open Sans', sans-serif;
             }
@@ -65,9 +65,11 @@
                 position: relative;
                 margin-top: 24px;
             }
-            .content {
+            .content,
+            .nav-wrap {
                 max-width: 976px;
                 margin: 0 auto;
+                padding: 0 6px;
                 clear: both;
             }
             .article-meta {
@@ -75,8 +77,9 @@
                 padding-bottom: 24px;
                 border-bottom: solid 1px #717171;
             }
-            .nav {
+            .nav-wrap {
                 background: #3D3D3E;
+                padding: 6px 0;
             }
             h1 {
                 margin: 0;
@@ -123,7 +126,11 @@
             </div>
         </header>
         <nav>
-            <div class="nav"></div>
+            <div class="nav-wrap">
+                <div class="nav">
+                    ABOUT&nbsp;&nbsp;&nbsp;&nbsp;POSTS
+                </div>
+            </div>
         </nav>
         <div class="content-wrap">
             <div class="content">

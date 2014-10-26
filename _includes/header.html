@@ -31,17 +31,17 @@
                 background-position: 50% 50%;
                 background-repeat: no-repeat;
                 color: #ddd;
-                background-attachment: fixed;
                 padding: 12px 0;
                 font-weight: lighter;
             }
 
             .header {
                 max-width: 976px;
-                padding: 0 6px;
+                padding: 0 12px;
                 margin: 0 auto;
                 overflow: auto;
                 font-family: 'Open Sans', sans-serif;
+                letter-spacing: -1px;
             }
             .header__text {
                 font-weight: lighter;
@@ -60,6 +60,7 @@
                 width: 100px;
                 float: right;
                 border-radius: 100% 50%;
+                margin-top: -40px;
             }
             .content-wrap {
                 position: relative;
@@ -69,7 +70,7 @@
             .nav {
                 max-width: 976px;
                 margin: 0 auto;
-                padding: 0 6px;
+                padding: 0 12px;
                 clear: both;
             }
             .article-meta {
@@ -80,16 +81,14 @@
             .nav-wrap {
                 background: #3d3d3e;
                 padding: 6px 0;
-            }
-            h1 {
-                margin: 0;
-                font-size: 48px;
-                font-size: 3rem;
-                font-weight: lighter;
+                text-align: center;
+                font-size: 22px;
+                font-size: 1.4rem;
             }
             a:link,
             a:visited {
                 color: #FF5B02;
+                text-decoration: none;
             }
             p {
                 margin: 0;
@@ -101,9 +100,18 @@
             }
             .article-title {
                 line-height: 1.1;
-                margin-bottom: 24px;
+                margin-bottom: 12px;
+                margin: 0;
+                font-size: 38px;
+                font-size: 2.4rem;
+                font-weight: lighter;
+                letter-spacing: -1px;
+            }
+            .article-date {
+                font-size: 1.4rem;
             }
             @media all and (min-width: 63em) {
+
                 .header-wrap {
                     text-align: left;
                 }
@@ -118,6 +126,7 @@
                     text-align: right;
                     display: inline;
                     vertical-align: middle;
+                    margin-top: 0;
                 }
             }
         </style>

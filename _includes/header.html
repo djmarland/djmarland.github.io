@@ -10,12 +10,16 @@
         <link rel="icon" sizes="196x196" href="/apple-touch-icon-precomposed.png" />
         <style>
             html {
-                background: #E8E8E8;
-                color: #444;
+                background: #2C2C2C;
+                color: #eee;
+                font-family: sans-serif;
+            }
+            body {
+                padding: 0;
             }
             .header-wrap {
-                background: #e6192b;
-                background: #e6192b repeating-radial-gradient(
+                background: #2C2C2C;
+                background: #FF5B02 repeating-radial-gradient(
                   circle,
                   rgba(31,31,31,0.97),
                   rgba(31,31,31,0.97) 16px,
@@ -41,7 +45,12 @@
                 font-size: 2.4em;
                 display: block;
             }
-            .header__link {
+            .header__link,
+            .header__link:visited,
+            .header__link:link,
+            .header__link:hover,
+            .header__link:active,
+            .header__link:focus {
                 text-decoration: none;
             }
             .header__img {
@@ -63,13 +72,17 @@
                 padding-bottom: 24px;
                 border-bottom: solid 1px #717171;
             }
+            .nav {
+                background: #3D3D3E;
+            }
             h1 {
                 margin: 0;
             }
+            a:link {
+                color: #FF5B02;
+            }
             @media all and (min-width: 63em) {
                 .header-wrap {
-                    margin-top: 24px;
-                    margin-bottom: 48px;
                     text-align: left;
                 }
                 .header__text {
@@ -96,5 +109,8 @@
                 </div>
             </div>
         </header>
+        <nav>
+            <div class="nav"></div>
+        </nav>
         <div class="content-wrap">
             <div class="content">

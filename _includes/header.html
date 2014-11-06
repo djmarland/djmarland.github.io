@@ -7,150 +7,28 @@
         <meta name="description" content="Semantic, progressive, responsive and responsible Web developer with skills in HTML, CSS, JavaScript &amp; PHP">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="msapplication-square150x150logo" content="/apple-touch-icon-precomposed.png" />
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css' />
+        <link href='/assets/styles/main.css' rel='stylesheet' type='text/css' />
         <link rel="icon" sizes="196x196" href="/apple-touch-icon-precomposed.png" />
-        <style>
-            html {
-                background: #2C2C2C;
-                color: #eee;
-            }
-            body {
-                padding: 0;
-                margin: 0;
-                font-family: 'Open Sans', sans-serif;
-            }
-            .header-wrap {
-                background: #2C2C2C;
-                background: #FF5B02 repeating-radial-gradient(
-                  circle,
-                  rgba(31,31,31,0.97),
-                  rgba(31,31,31,0.97) 16px,
-                  rgba(31,31,31,0.94) 16px,
-                  rgba(31,31,31,0.94) 32px
-                );
-                background-position: 50% 50%;
-                background-repeat: no-repeat;
-                color: #ddd;
-                padding: 12px 0;
-                font-weight: lighter;
-            }
 
-            .header {
-                max-width: 976px;
-                padding: 0 12px;
-                margin: 0 auto;
-                overflow: auto;
-                font-family: 'Open Sans', sans-serif;
-                letter-spacing: -1px;
-            }
-            .header__text {
-                font-weight: lighter;
-                font-size: 2.4em;
-                display: block;
-                max-width: 380px;
-            }
-            .header__link,
-            .header__link:visited,
-            .header__link:link,
-            .header__link:hover,
-            .header__link:active,
-            .header__link:focus {
-                text-decoration: none;
-            }
-            .header__img {
-                width: 100px;
-                float: right;
-                border-radius: 100% 50%;
-                margin-top: -40px;
-            }
-            .content-wrap {
-                position: relative;
-                margin-top: 48px;
-            }
-            .content,
-            .nav {
-                max-width: 976px;
-                margin: 0 auto;
-                padding: 0 12px;
-                clear: both;
-            }
-            .article-meta {
-                margin-bottom: 24px;
-                padding-bottom: 24px;
-                border-bottom: solid 1px #717171;
-            }
-            .nav-wrap {
-                background: #3d3d3e;
-                padding: 6px 0;
-                text-align: center;
-                font-size: 22px;
-                font-size: 1.4rem;
-            }
-            a:link,
-            a:visited {
-                color: #FF5B02;
-                text-decoration: none;
-            }
-            p {
-                margin: 0;
-            }
-            .article-content p {
-                margin-bottom: 24px;
-                max-width: 780px;
-                line-height: 1.6;
-            }
-            .article-title {
-                line-height: 1.1;
-                margin-bottom: 12px;
-                margin: 0;
-                font-size: 38px;
-                font-size: 2.4rem;
-                font-weight: lighter;
-                letter-spacing: -1px;
-            }
-            .article-date {
-                font-size: 1.4rem;
-            }
-            @media all and (min-width: 63em) {
-                .header-wrap {
-                    text-align: left;
-                }
-                .header__text {
-                    text-align: left;
-                    display: inline;
-                    font-size: 3.4em;
-                    vertical-align: middle;
-                    line-height: 100px;
-                max-width: none;
-                }
-                .header__img {
-                    text-align: right;
-                    display: inline;
-                    vertical-align: middle;
-                    margin-top: 0;
-                }
-
-                .content-wrap {
-                    margin-top: 60px;
-                }
-            }
-        </style>
     </head>
     <body>
     	<header>
-            <div class="header-wrap">
-                <div class="header">
-                <p class="header__text"><a class="header__link" href="/">David J Marland</a></p>
-                <img class="header__img" src="/assets/img/profile.jpg" alt="Photo of me wearing a bow tie" />
+            <div class="header">
+                <div class="wrap">
+
+                    <p class="header__text"><a class="header__link" href="/">David J Marland</a></p>
+                    <nav>
+                        <div class="nav">
+                            <ul>
+                                <li><a href="/">About</a></li>
+                                <li><a href="/posts">Posts</a></li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </header>
-        <nav>
-            <div class="nav-wrap">
-                <div class="nav">
-                    <a href="/">About</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/posts">Posts</a>
-                </div>
-            </div>
-        </nav>
-        <div class="content-wrap">
+
+        <div class="wrap">
             <div class="content">

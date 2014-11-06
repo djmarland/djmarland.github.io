@@ -1,0 +1,200 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #009688;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: lighter;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 32px;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.header {
+    background: #444;
+    color: #fff;
+    margin-bottom: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.prose p {
+    line-height: 1.6;
+    font-size: 18px;
+    font-size: 1.125rem;
+
+}
+
+@media (min-width: 900px) {
+    .header {
+        margin-bottom: 48px;
+    }
+    .layout-intro {
+        vertical-align: top;
+        width: 330px;
+        text-align: right;
+        margin-right: 48px;
+        display: inline-block;
+    }
+    .layout-content {
+        vertical-align: top;
+        margin-top:12px;
+        display: inline-block;
+        width: 640px;
+    }
+}
+
+/*
+html {
+                background: #2C2C2C;
+                color: #eee;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+                font-family: 'Open Sans', sans-serif;
+            }
+            .header-wrap {
+                background: #2C2C2C;
+                background: #FF5B02 repeating-radial-gradient(
+                  circle,
+                  rgba(31,31,31,0.97),
+                  rgba(31,31,31,0.97) 16px,
+                  rgba(31,31,31,0.94) 16px,
+                  rgba(31,31,31,0.94) 32px
+                );
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                color: #ddd;
+                padding: 12px 0;
+                font-weight: lighter;
+            }
+
+            .header {
+                max-width: 976px;
+                padding: 0 12px;
+                margin: 0 auto;
+                overflow: auto;
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: -1px;
+            }
+            .header__text {
+                font-weight: lighter;
+                font-size: 2.4em;
+                display: block;
+                max-width: 380px;
+            }
+            .header__link,
+            .header__link:visited,
+            .header__link:link,
+            .header__link:hover,
+            .header__link:active,
+            .header__link:focus {
+                text-decoration: none;
+            }
+            .header__img {
+                width: 100px;
+                float: right;
+                border-radius: 100% 50%;
+                margin-top: -40px;
+            }
+            .content-wrap {
+                position: relative;
+                margin-top: 48px;
+            }
+            .content,
+            .nav {
+                max-width: 976px;
+                margin: 0 auto;
+                padding: 0 12px;
+                clear: both;
+            }
+            .article-meta {
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+                border-bottom: solid 1px #717171;
+            }
+            .nav-wrap {
+                background: #3d3d3e;
+                padding: 6px 0;
+                text-align: center;
+                font-size: 22px;
+                font-size: 1.4rem;
+            }
+            a:link,
+            a:visited {
+                color: #FF5B02;
+                text-decoration: none;
+            }
+            p {
+                margin: 0;
+            }
+            .article-content p {
+                margin-bottom: 24px;
+                max-width: 780px;
+                line-height: 1.6;
+            }
+            .article-title {
+                line-height: 1.1;
+                margin-bottom: 12px;
+                margin: 0;
+                font-size: 38px;
+                font-size: 2.4rem;
+                font-weight: lighter;
+                letter-spacing: -1px;
+            }
+            .article-date {
+                font-size: 1.4rem;
+            }
+            @media all and (min-width: 63em) {
+                .header-wrap {
+                    text-align: left;
+                }
+                .header__text {
+                    text-align: left;
+                    display: inline;
+                    font-size: 3.4em;
+                    vertical-align: middle;
+                    line-height: 100px;
+                max-width: none;
+                }
+                .header__img {
+                    text-align: right;
+                    display: inline;
+                    vertical-align: middle;
+                    margin-top: 0;
+                }
+
+                .content-wrap {
+                    margin-top: 60px;
+                }
+            }
+            */

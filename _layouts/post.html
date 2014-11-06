@@ -4,13 +4,15 @@ layout: post
 
 {% include header.html %}
 <article>
-  <div class="article-meta">
+    <div class="layout-intro">
     <h1 class="article-title">{{ page.title }}</h1>
     {% if page.tagline %}<small class="article-tagline">{{page.tagline}}</small>{% endif %}
     <p class="article-date">{{ page.date | date_to_long_string }}</p>
   </div>
-  <div class="article-content">
-    {{ content }}
+  <div class="layout-content">
+      <div class="prose">
+        {{ content }}
+      </div>
   </div>  
 </article>
 <aside>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>David J Marland | Web developer</title>
+        <title>{% if page.title %}{{page.title}} | {% endif %}David J Marland, Web developer</title>
         <meta name="description" content="Semantic, progressive, responsive and responsible Web developer with skills in HTML, CSS, JavaScript &amp; PHP">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="msapplication-square150x150logo" content="/apple-touch-icon-precomposed.png" />
@@ -14,21 +14,11 @@
     </head>
     <body>
     	<header>
-            <div class="header">
-                <div class="wrap">
-
+            <div class="header box--primary">
+                <div class="wrap point--header">
                     <p class="header__text"><a class="header__link" href="/">David J Marland</a></p>
-                    <nav>
-                        <div class="nav">
-                            <ul>
-                                <li><a href="/">About</a></li>
-                                <li><a href="/posts">Posts</a></li>
-                            </ul>
-                        </div>
-                    </nav>
                 </div>
             </div>
         </header>
 
-        <div class="wrap">
-            <div class="content">
+        <div class="point__follow box--body">

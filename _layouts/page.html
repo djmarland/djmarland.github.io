@@ -2,11 +2,15 @@
 layout: page
 ---
 {% include header.html %}
-<div class="page-intro">
-  <h1>{{ page.title }}{% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
-</div>
-
-<div class="layout-content">
-    {{ content }}
+<div class="wrap point">
+    <div class="layout-intro">
+        <h1 class="article-title">{{ page.title }}</h1>
+        {% if page.tagline %}<p class="article-tagline">{{page.tagline}}</p>{% endif %}
+    </div>
+    <div class="layout-content">
+        <div class="prose">
+            {{ content }}
+        </div>
+    </div>
 </div>
 {% include footer.html %}

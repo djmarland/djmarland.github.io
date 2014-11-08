@@ -15,10 +15,11 @@ group: navigation
     {% if forloop.first %}
       <h2>{{this_year}}</h2>
       <h3>{{this_month}}</h3>
-      <ul>
+      <ul class="list--spaced">
     {% endif %}
   
-    <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><br />
+        <span class="text--subtle">{{ post.date | date_to_long_string }}</span></li>
   
     {% if forloop.last %}
       </ul>
@@ -32,7 +33,7 @@ group: navigation
         {% if this_month != next_month %}
           </ul>
           <h3>{{next_month}}</h3>
-          <ul>
+          <ul class="list--spaced">
         {% endif %}
       {% endif %}
     {% endif %}

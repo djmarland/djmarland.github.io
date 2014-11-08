@@ -4,32 +4,44 @@ layout: post
 
 {% include header.html %}
 <article>
-    <div class="layout-intro">
-    <h1 class="article-title">{{ page.title }}</h1>
-    {% if page.tagline %}<small class="article-tagline">{{page.tagline}}</small>{% endif %}
-    <p class="article-date">{{ page.date | date_to_long_string }}</p>
-  </div>
-  <div class="layout-content">
-      <div class="prose">
-        {{ content }}
-      </div>
-  </div>  
+    <div class="wrap point">
+        <div class="layout-intro">
+            <h1 class="article-title">{{ page.title }}</h1>
+            {% if page.tagline %}<p class="article-tagline">{{page.tagline}}</p>{% endif %}
+            <p class="article-date text--subtle">{{ page.date | date_to_long_string }}</p>
+        </div>
+        <div class="layout-content">
+          <div class="prose">
+            {{ content }}
+          </div>
+        </div>
+    </div>
 </article>
 <aside>
-  <div class="pagination">
-      <ul>
-      {% if page.previous %}
-        <li class="prev"><a href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
-      {% else %}
-        <li class="prev disabled"><a>&larr; Previous</a></li>
-      {% endif %}
-        <li><a href="/posts">All</a></li>
-      {% if page.next %}
-        <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
-      {% else %}
-        <li class="next disabled"><a>Next &rarr;</a>
-      {% endif %}
-      </ul>
+    <div class="pagination box--secondary point__follow">
+        <div class="wrap point">
+            <nav>
+                <div class="layout-intro push">
+                    <h2 class="push">More</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts">All posts</a></li>
+                    </ul>
+                </div>
+                <div class="layout-content">
+                    {% if page.previous %}
+                    <h3>Previous</h3>
+                    <p class="push"><a href="{{ page.previous.url }}">{{ page.previous.title }}</a><br />
+                        <span class="text--subtle">{{ page.previous.date | date_to_long_string }}</span></p>
+                    {% endif %}
+                    {% if page.next %}
+                    <h3>Next</h3>
+                    <p><a href="{{ page.next.url }}">{{ page.next.title }}</a><br />
+                        <span class="text--subtle">{{ page.next.date | date_to_long_string }}</span></p>
+                    {% endif %}
+                </div>
+            </nav>
+        </div>
     </div>
 </aside>
 

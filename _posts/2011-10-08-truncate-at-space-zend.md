@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Truncate at space, Zend View Helper"
+redirect_from: "/2011/10/truncate-at-space-zend-view-helper/"
 ---
 
 <p>When writing web applications you may frequently find the need to <a href="http://www.thefreedictionary.com/truncate" data-mce-href="http://www.thefreedictionary.com/truncate">truncate</a> strings. In php you <strong>could</strong> just use <a href="http://php.net/manual/en/function.substr.php" data-mce-href="http://php.net/manual/en/function.substr.php">substr</a> but that could be <a href="http://picchore.com/funny/carrots-glazed-with-what/" data-mce-href="http://picchore.com/funny/carrots-glazed-with-what/">dangerous</a>.</p>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Cross browser alpha transparent background CSS (rgba)"
+redirect_from: "/2011/10/cross-browser-alpha-transparent-background-css"
 ---
 
 <p>In building the <a href="http://www.bbc.co.uk/programmes">BBC Programmes</a> website the design called for various layers of semi-transparent coloured boxes. These colours can change depending on the programme (for example: <a href="http://www.bbc.co.uk/programmes/b006v0dz">Never Mind the Buzzcocks</a>) so an alpha transparent PNG is not a maintainable option.<br />

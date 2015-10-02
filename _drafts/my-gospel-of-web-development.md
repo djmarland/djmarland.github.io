@@ -19,8 +19,11 @@ to others strongly. However, they are not set in stone. I will, and have, evolve
 something new comes along to take its place. This does not happen lightly however. I will not jump
 onto the latest bandwagon. I will observe and evaluate, maybe even experiment.
 
-My <a href="/beliefs/">page of beliefs</a> purposely has a last updated date on it. It should be an
-evolving document as times and opinions change.
-
 <h2>Strong opinions, weakly held</h2>
+I value these beliefs strongly, and they are my preferred way of working. But I can be convinced to change.
+The <a href="/beliefs/">page of beliefs</a> purposely has a last updated date on it. It should be an
+evolving document as times and opinions change. Change is necessary to remain relevant in the world
+of the web, though it must be well informed change.
+
+
 Is this a good practice to have? If not, let me know; though I may take some convincing.

@@ -239,8 +239,8 @@ a:focus,
 .article-date,
 .article-tagline {
     line-height: 1.6;
-    font-size: 18px;
-    font-size: 1.125rem;
+    font-size: 20px;
+    font-size: 1.25rem;
 }
 .prose > * {
     margin-bottom: 24px;

@@ -1,62 +1,349 @@
----
-layout: home
----
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>David Jonathan Marland, Web developer and Software engineer</title>
+    <meta name="description" content="Semantic, progressive, responsive and responsible Web developer with skills in HTML, CSS, JavaScript &amp; PHP">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-square150x150logo" content="/apple-touch-icon-precomposed.png" />
+    <link rel="icon" sizes="196x196" href="/apple-touch-icon-precomposed.png" />
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <style>
+        *,*:before,*:after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Slabo 27px', serif;
+            color: #444;
+        }
+        a,
+        a:link {
+            color: #464;
+        }
+        a:visited {
+            color: #664;
+        }
+        a:hover,
+        a:active,
+        a:focus {
+            color: #494;
+        }
+        .top {
+            background: #454;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .header__text {
+            display: block;
+            text-align: center;
+            font-size: 3rem;
+            padding: 16px 0 8px;
+            margin: 0;
+        }
+        .nav {
+            list-style: none;
+            margin: 0 0 16px 0;
+            padding: 0;
+            text-align: center;
+        }
+        .nav__item {
+            display: inline-block;
+        }
+        .nav__link,
+        .nav__link:link,
+        .nav__link:visited {
+            display: inline-block;
+            padding: 4px 8px;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .nav__link:hover,
+        .nav__link:active,
+        .nav__link:focus {
+            color: #454;
+            background: #fff;
+        }
+        .main {
+            margin-top: 176px;
+        }
+        .wrap {
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
 
-<h2>Semantic, progressive, responsive and responsible Web developer</h2>
-<ul>
-    <li>HTML</li>
-    <li>CSS (+ Sass)</li>
-    <li>JavaScript (+ Node)</li>
-    <li>PHP</li>
-</ul>
-<h2>Current employment</h2>
-<p>Technical Architect (Principle Software Engineer), BBC Radio, Music &amp; Programmes - London, UK</p>
+        .profile-image {
+            border-radius: 100% 50%;
+        }
+        .section {
+            margin-bottom: 32px;
+            display: flex;
+        }
+        .section__intro {
+            width: 332px;
+            flex: 0 0 332px;
+            display: inline-block;
+            padding-right: 32px;
+            text-align: right;
+            vertical-align: top;
+        }
+        .section__intro h2:before {
+            display: block;
+            content: " ";
+            margin-top: -160px;
+            height: 160px;
+            visibility: hidden;
+        }
+        .section__main {
+            display: inline-block;
+            padding-left: 32px;
+            border-left: solid 1px #ccc;
+            vertical-align: top;
+        }
 
-<h2>Contact me</h2>
-<ul>
-    <li><a href="http://www.twitter.com/djmarland">Twitter (@djmarland)</a></li>
-    <li><a href="http://uk.linkedin.com/pub/david-marland/52/76/5b5">Linked In</a></li>
-    <li><a href="mailto:davidm@rland.me.uk">E-mail</a></li>
-    <li><a href="https://github.com/djmarland">Github</a></li>
-    <li><a href="http://codepen.io/djmarland">Codepen</a></li>
-</ul>
+        .prose h2 {
+            font-size: 2rem;
+            margin: 0 0 16px;
+        }
+        .prose h3 {
+            font-size: 1.6rem;
+            margin: 0 0 8px;
+        }
+        .prose h4 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        .prose p {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            margin: 0 0 16px;
+        }
+        .prose ul {
+            font-size: 1.2rem;
+            margin: 0 0 16px;
+            padding: 0 0 0 16px;
+            list-style: square;
+        }
+        .text--subtle {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<div class="top">
+    <header>
+    <div class="header">
+        <div class="wrap">
+            <h1 class="header__text">David Jonathan Marland</h1>
+        </div>
+    </div>
+</header>
+<nav>
+    <div class="wrap">
+    <ul class="nav">
+        <li class="nav__item">
+            <a class="nav__link" href="#profile">Profile</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#skills">Skills</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#experience">Experience</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#contact">Contact</a>
+        </li>
+    </ul>
+    </div>
+</nav>
+</div>
+<main>
+    <div class="main">
+        <div class="wrap prose">
+            <div class="section">
+                <div class="section__intro">
+                    <h2 id="profile">Profile</h2>
+                    <img class="profile-image" src="profile.jpg" alt="Photo of David Marland" />
+                </div>
+                <div class="section__main">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                    <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
+                </div>
+            </div>
 
-<h2>Posts</h2>
-<ul class="list--spaced">
-    {% for post in site.posts limit:3 %}
-    <li>
-        <p><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><br />
-            <span class="text--subtle">{{ post.date | date_to_long_string }}</span></p>
-    </li>
-    {% endfor %}
-</ul>
-<p><a href="/posts">See all posts</a></p>
+            <div class="section">
+                <div class="section__intro">
+                    <h2 id="skills">Skills</h2>
+                </div>
+                <div class="section__main">
+                    <h3>Web</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS & Sass (SCSS)</li>
+                        <li>URL Design</li>
+                        <li>Progressive Enhancement</li>
+                        <li>Responsive Web Design</li>
+                        <li>Semantic Markup & W3C standards</li>
+                        <li>SEO</li>
+                        <li>Accessibility</li>
+                        <li>RESTful APIs</li>
+                    </ul>
+                    <h3>JavaScript</h3>
+                    <ul>
+                        <li>Vanilla JavaScript</li>
+                        <li>ES6 & Babel</li>
+                        <li>React Components</li>
+                        <li>Node.js
+                            <ul>
+                                <li>Express</li>
+                                <li>Sequelize</li>
+                                <li>Grunt</li>
+                                <li>Gulp</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>PHP</h3>
+                    <ul>
+                        <li>PHP 7.1</li>
+                        <li>Full Object-Oriented modern vanilla PHP</li>
+                        <li>Symfony 3</li>
+                        <li>Silex</li>
+                        <li>Doctrine and SQL</li>
+                        <li>Domain Driven Design</li>
+                        <li>Service oriented architecture</li>
+                        <li>MVC</li>
+                        <li>Dependency Injection</li>
+                        <li>Unit testing</li>
+                    </ul>
+                    <h3>Architecture</h3>
+                    <ul>
+                        <li>Cloud with AWS
+                            <ul>
+                                <li>EC2</li>
+                                <li>Auto-scaling</li>
+                                <li>Elastic Beanstalk</li>
+                                <li>RDS (MySQL, Postgres &amp; Aurora)</li>
+                                <li>SQS</li>
+                                <li>Cloudwatch</li>
+                                <li>SNS</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>Software</h3>
+                    <ul>
+                        <li>Source control with git &amp; Github</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Microsoft Office Suite</li>
+                        <li>Proficient in Windows, Mac &amp; Linux</li>
+                    </ul>
+                    <h3>Project management</h3>
+                    <ul>
+                        <li>Certified Scrum Master</li>
+                        <li>Agile</li>
+                    </ul>
+                </div>
+            </div>
 
-<h2>Articles</h2>
-<ul class="list--spaced">
-    <li>
-        <p><a href="http://www.smashingmagazine.com/2014/05/02/responsive-design-begins-with-the-url/">Responsive Design Begins With The URL</a><br />
-        <span class="text--subtle">02 May 2014</span><br />
-        Smashing Magazine</p>
-    </li>
-    <li>
-        <p><a href="http://www.bbc.co.uk/blogs/internet/posts/BBC-Programme-Pages-Content-Driven-Responsive-Redesign">BBC Programme pages: content driven responsive redesign</a><br />
-            <span class="text--subtle">27 February 2014</span><br />
-            BBC Internet Blog</p>
-    </li>
-</ul>
+            <div class="section">
+                <div class="section__intro">
+                    <h2 id="experience">Experience</h2>
+                </div>
+                <div class="section__main">
 
-<h2>Projects and Websites</h2>
-<ul class="list--spaced">
-    <li>
-        <p><a href="https://www.isinanalytics.com/">ISIN Analytics<br />
-           <span class="text--subtle">Structured pages for the finance markets,
-                with a page for every <abbr title="International Securities Identification Number">ISIN</abbr></span></a>
-           </p>
-    </li>
-    <li>
-        <p><a href="https://tubealert.co.uk/">Tube Alert<br />
-           <span class="text--subtle">Progressively enhanced web application for the tube status, with offline mode and push notifications</span></a>
-           </p>
-    </li>
-</ul>
+
+                    <h3>University of Bath</h3>
+                    <p><span class="text--subtle">2002 - 2005</span><br />
+                        BEng (Hons) 2:2 Electrical and Electronic Engineering - Accredited.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section__intro">
+                    <h2 id="portfolio">Portfolio</h2>
+                </div>
+                <div class="section__main">
+                    <h3>Projects &amp; Websites</h3>
+                    <ul>
+                        <li>
+                            <h4><a href="https://www.isinanalytics.com/">ISIN Analytics</a></h4>
+                            <p>Structured pages for the finance markets,
+                with a page for every <abbr title="International Securities Identification Number">ISIN</abbr>
+                            </p>
+                        </li>
+                        <li>
+                            <h4><a href="https://tubealert.co.uk/">Tube Alert</a></h4>
+                            <p>Progressively enhanced web application for the tube status,
+                                    with offline mode and push notifications
+                            </p>
+                        </li>
+
+                    </ul>
+                    <h3>Articles</h3>
+                    <ul>
+                        <li>
+                            <h4>
+                                <a href="http://www.smashingmagazine.com/2014/05/02/responsive-design-begins-with-the-url/">
+                                    Responsive Design Begins With The URL
+                                </a>
+                            </h4>
+                            <p class="text--subtle">02 May 2014</p>
+                        </li>
+                        <li>
+                            <h4>
+                                <a href="http://www.bbc.co.uk/blogs/internet/posts/BBC-Programme-Pages-Content-Driven-Responsive-Redesign">
+                                    BBC Programme pages: content driven responsive redesign
+                                </a>
+                            </h4>
+                            <p class="text--subtle">27 February 2014</p>
+                        </li>
+
+                    </ul>
+                    <h3>Talks</h3>
+                    <ul>
+                        <li>
+                            <h4>
+                                <a href="http://www.techinsight.io/event/london-june-2014/">Tech Insight (June 2014)</a>
+                            </h4>
+                            <p>
+                                URLs Are Dead. Long Live URLs
+                                (<a href="https://docs.google.com/presentation/d/1TiOch-DYRv2F7t-if5XMkEXqrK1pPB5k_R1-IQQTMtw/pub#slide=id.p">Slides</a>)
+                            </p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section__intro">
+                    <h2 id="contact">Contact</h2>
+                </div>
+                <div class="section__main">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-24417125-1');ga('send','pageview');
+</script>
+</body>
+</html>

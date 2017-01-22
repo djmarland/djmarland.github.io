@@ -1,3 +1,0 @@
-permalink: /:title-:month-:year
-gems:
-  - jekyll-redirect-from

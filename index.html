@@ -7,6 +7,7 @@
     <meta name="description" content="Semantic, progressive, responsive and responsible Web developer with skills in HTML, CSS, JavaScript &amp; PHP">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="msapplication-square150x150logo" content="/apple-touch-icon-precomposed.png" />
+    <meta name="theme-color" content="#ffd42d">
     <link rel="icon" sizes="196x196" href="/apple-touch-icon-precomposed.png" />
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200,400,700" rel="stylesheet" />
     <style>
@@ -16,7 +17,7 @@
         body {
             margin: 0 auto;
             padding: 0;
-            max-width: 1024px;
+            max-width: 1280px;
             color: #828282;
             font-family: 'Fira Sans Condensed', Helvetica, sans-serif;
             background: #6a6b6b;
@@ -27,16 +28,16 @@
         }
         a,
         a:link {
-            color: #ffd42d;
+            color: #47494b;
             font-weight: bold;
         }
         a:visited {
-            color: #ffd42d;
+            color: #47494b;
         }
         a:hover,
         a:active,
         a:focus {
-            color: #47494b;
+            color: #ffd42d;
         }
         .top {
             width: 100%;
@@ -53,7 +54,7 @@
             background-size: cover;
             padding: 10%;
         }
-        @media (min-width: 48em) {
+        @media (min-width: 63em) {
             body {
                 padding: 64px 8px;
                 display: flex;
@@ -66,6 +67,14 @@
             }
             .header {
                 padding: 64px 0;
+            }
+        }
+        @media (min-width: 78em) {
+            .top {
+                flex-basis: 25%;
+            }
+            .main {
+                flex-basis: 75%;
             }
         }
         @media (min-height: 43.75em) {
@@ -171,21 +180,23 @@
             margin: 0;
         }
         .prose p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             line-height: 1.4;
             margin: 0 0 16px;
         }
-        .prose p:last-child {
-            margin-bottom: 0;
-        }
+
         .prose ul {
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin: 0 0 16px;
             padding: 0 0 0 32px;
             list-style: square;
         }
+        .prose p:last-child,
+        .prose ul:last-child {
+            margin-bottom: 0;
+        }
         .text--subtle {
-            color: #999;
+            opacity: 0.8;
         }
 
         .start-date {
@@ -198,6 +209,115 @@
             50% {
                 border-bottom-color: #2c383c;
             }
+        }
+
+        .skills-table {
+            width: 100%;
+            margin-bottom: 32px;
+            border-spacing: 0;
+        }
+        .skills-table:last-child {
+            margin-bottom:0;
+        }
+        .skills-table tr:nth-child(odd) {
+            background: #f6f6f6;
+        }
+        .skills-table td {
+            padding: 8px;
+            margin: 0;
+            vertical-align: middle;
+        }
+        .skills-table__level {
+            width: 120px;
+        }
+        progress[value] {
+            -webkit-appearance: none;
+               -moz-appearance: none;
+                    appearance: none;
+            background-color: #6a6b6b;
+            color: #ffd42d;
+            width: 100%;
+            height: 16px;
+        }
+        progress[value]::-webkit-progress-bar {
+            background-color: #6a6b6b;
+        }
+        progress[value]::-webkit-progress-value {
+            background-color: #ffd42d;
+            border-top-right-radius: 1px;
+            border-bottom-right-radius: 1px;
+        }
+        progress[value]::-moz-progress-bar {
+            background-color: #ffd42d;
+            border-top-right-radius: 1px;
+            border-bottom-right-radius: 1px;
+        }
+
+        .exp-table {
+            width: 100%;
+            border-spacing: 0;
+        }
+        .exp-table td {
+            vertical-align: top;
+            padding: 8px 8px 8px 0;
+        }
+        .exp-table .exp-table__place {
+            color: #2c2e26;
+            font-size: 1.2rem;
+            display: block;
+            margin: 0;
+        }
+        .exp-table .exp-table__date {
+            font-size: 0.8rem;
+            border-right: solid 16px #ffd42d;
+            padding-top: 0;
+            position: relative;
+        }
+        .exp-table__date-stop {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .exp-table tr:nth-child(even) .exp-table__date {
+            border-color: #6a6b6b;
+        }
+        .exp-table h4 {
+            font-size: 1rem;
+        }
+
+        .box-link-list.box-link-list  {
+            list-style: none;
+            padding: 0;
+            margin-left: -16px;
+            display: flex;
+        }
+        .box-link-list li {
+            margin-left: 16px;
+            margin-bottom: 16px;
+            max-width: 320px;
+            text-align: center;
+            display: flex;
+            flex: 1;
+        }
+        .box-link-list a {
+            width: 100%;
+            display: block;
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            text-decoration: none;
+            color: #41413e;
+            background: #ffd42d;
+            padding: 16px;
+        }
+        .box-link-list a:hover,
+        .box-link-list a:active,
+        .box-link-list a:focus {
+            color: #ffd42d;
+            background: #41413e;
+        }
+        .box-link-list a div {
+            width: 100%;
         }
     </style>
 </head>
@@ -218,7 +338,7 @@
             <a class="nav__link" href="#experience">Experience</a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="#portfolio">Portfolio</a>
+            <a class="nav__link" href="#box-link-list">Portfolio</a>
         </li>
         <li class="nav__item">
             <a class="nav__link" href="#contact">Contact</a>
@@ -233,7 +353,7 @@
                 <div class="section__intro">
                     <h1 class="h1">
                         <span class="h1__head">David Jonathan Marland</span>
-                        <span class="h1__sub">Semantic, progressive, responsive and responsible Web developer</span>
+                        <span class="h1__sub">Semantic, progressive, responsive and responsible Web Developer and Software Engineer</span>
                     </h1>
                 </div>
                 <div class="section__intro visually-hidden">
@@ -244,8 +364,15 @@
                         <strong>Available for contract work starting: </strong>
                         <span class="start-date">10th April 2017</span>
                     </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
-                    <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
+                    <p>
+                        I am a senior web developer/software engineer open for opportunities to work on interesting web based projects.
+                        I believe in the core of the web, and seek to build web-friendly projects that are accessible to all.
+                    </p>
+                    <p>
+                        I have a particular affinity for Modern PHP (7.1) using Modern coding practices,
+                        though I am also proficient in Javascript with Node and React. I like to choose the right tool
+                        for the job.
+                    </p>
                 </div>
             </div>
 
@@ -254,92 +381,355 @@
                     <h2 id="skills">Skills</h2>
                 </div>
                 <div class="section__main">
-                    <h3>Web</h3>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS & Sass (SCSS)
-                            <ul>
-                                <li>BEM</li>
-                                <li>Styleguides</li>
-                                <li>Components &amp; Atomic design</li>
-                            </ul>
-                        </li>
-                        <li>URL Design</li>
-                        <li>Progressive Enhancement</li>
-                        <li>Responsive Web Design</li>
-                        <li>Semantic Markup & W3C standards</li>
-                        <li>SEO</li>
-                        <li>Accessibility</li>
-                        <li>RESTful APIs</li>
-                    </ul>
-                    <h3>JavaScript</h3>
-                    <ul>
-                        <li>Vanilla JavaScript</li>
-                        <li>jQuery</li>
-                        <li>ES6 & Babel (Class structure)</li>
-                        <li>React Components</li>
-                        <li>Universal/Isomorphic React (Server side rendering)</li>
-                        <li>Node.js
-                            <ul>
-                                <li>Express</li>
-                                <li>Sequelize</li>
-                                <li>Grunt</li>
-                                <li>Gulp</li>
-                                <li>Webpack</li>
-                                <li>NPM / Yarn</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <h3>PHP</h3>
-                    <ul>
-                        <li>PHP 7.1</li>
-                        <li>Full Object-Oriented modern vanilla PHP</li>
-                        <li>PSR Standards</li>
-                        <li>Symfony 3</li>
-                        <li>Silex</li>
-                        <li>Laravel</li>
-                        <li>Doctrine and SQL</li>
-                        <li>Domain Driven Design</li>
-                        <li>Service oriented architecture</li>
-                        <li>MVC</li>
-                        <li>Interfaces & Presenters</li>
-                        <li>Dependency Injection</li>
-                        <li>Unit testing</li>
-                    </ul>
-                    <h3>Architecture</h3>
-                    <ul>
-                        <li>Cloud with AWS
-                            <ul>
-                                <li>EC2</li>
-                                <li>Auto-scaling</li>
-                                <li>Elastic Beanstalk</li>
-                                <li>RDS (MySQL, Postgres &amp; Aurora)</li>
-                                <li>SQS</li>
-                                <li>Cloudwatch</li>
-                                <li>SNS</li>
-                                <li>Cloudformation &amp; Troposphere</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <h3>Dev &amp; Deployment</h3>
-                    <ul>
-                        <li>Source control with git &amp; Github</li>
-                        <li>Jenkins</li>
-                        <li>Docker</li>
-                        <li>Vagrant</li>
-                    </ul>
+                    <h3>Web <small class="text--subtle">(15 years)</small></h3>
+                    <table class="skills-table">
+                        <thead class="visually-hidden">
+                            <tr>
+                                <th>Skill</th>
+                                <th>Proficiency level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>HTML</p>
+                                    <ul>
+                                        <li>HTML5, Semantic Markup & W3C standards</li>
+                                        <li>SEO</li>
+                                        <li>Accessibility</li>
+                                        <li>Caching</li>
+                                    </ul>
+                                </td>
+                                <td class="skills-table__level"><progress max="100" value="95">95%</progress></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>CSS &amp; Sass (SCSS)</p>
+                                    <ul>
+                                        <li>BEM</li>
+                                        <li>Styleguides</li>
+                                        <li>Components &amp; Atomic design</li>
+                                        <li>Responsive Web Design</li>
+                                    </ul>
+                                </td>
+                                <td class="skills-table__level"><progress max="100" value="90">90%</progress></td>
+                            </tr>
+                            <tr>
+                                <td><p>URL Design</p></td>
+                                <td class="skills-table__level"><progress max="100" value="85">85%</progress></td>
+                            </tr>
+                            <tr>
+                                <td><p>Progressive Enhancement</p></td>
+                                <td class="skills-table__level"><progress max="100" value="95">95%</progress></td>
+                            </tr>
+                            <tr>
+                                <td><p>RESTful APIs</p></td>
+                                <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>JavaScript <small class="text--subtle">(8 years)</small></h3>
+
+                    <table class="skills-table">
+                        <thead class="visually-hidden">
+                        <tr>
+                            <th>Skill</th>
+                            <th>Proficiency level</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <p>Vanilla JavaScript</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>jQuery</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>ES6 &amp; Babel (Class structure)</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="70">70%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>React Components</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="65">65%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Universal/Isomorphic React (Server side rendering)</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="65">65%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Node.js</p>
+                                <ul>
+                                    <li>Express</li>
+                                    <li>Sequelize</li>
+                                </ul>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="70">70%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Build tools</p>
+                                <ul>
+                                    <li>Grunt</li>
+                                    <li>Gulp</li>
+                                    <li>Webpack</li>
+                                    <li>NPM / Yarn</li>
+                                </ul>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="70">70%</progress></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>PHP <small class="text--subtle">(10 years)</small></h3>
+
+                    <table class="skills-table">
+                        <thead class="visually-hidden">
+                        <tr>
+                            <th>Skill</th>
+                            <th>Proficiency level</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <p>PHP 7.1</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="92">92%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Full Object-Oriented modern vanilla PHP</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="92">92%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>PSR Standards</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Symfony 3</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="70">70%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Silex</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="65">65%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Laravel</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="35">35%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Doctrine &amp; SQL</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Domain Driven Design</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="85">85%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Service Oriented Architecture</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>MVC</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="95">95%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interfaces &amp; Presenters</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="90">90%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Dependency Injection</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="90">90%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Unit Testing</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Architecture &amp; Deployment</h3>
+
+                    <table class="skills-table">
+                        <thead class="visually-hidden">
+                        <tr>
+                            <th>Skill</th>
+                            <th>Proficiency level</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <p><strong>AWS</strong> EC2 &amp; Autoscaling</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="85">85%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>AWS</strong> Elastic Beanstalk</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>AWS</strong> RDS (MySQL, Postgres &amp; Aurora)</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>AWS</strong> SQS &amp; SNS</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="85">85%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>AWS</strong> Cloudwatch</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>AWS</strong> Cloudformation &amp; Troposphere</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="65">65%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Source control with Git &amp; Github</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="85">85%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>VPS &amp; SSH</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Jenkins (Continuous Integration)</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Docker</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="65">65%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Vagrant</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="68">68%</progress></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
                     <h3>Software</h3>
-                    <ul>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Microsoft Office Suite</li>
-                        <li>Proficient in Windows, Mac &amp; Linux</li>
-                    </ul>
+
+                    <table class="skills-table">
+                        <thead class="visually-hidden">
+                        <tr>
+                            <th>Skill</th>
+                            <th>Proficiency level</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <p>Adobe Photoshop</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Adobe Illustrator</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="55">55%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>PHPStorm</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Microsoft Office Suite</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="97">97%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Windows, Mac &amp; Linux Operating Systems</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="97">97%</progress></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
                     <h3>Project management</h3>
-                    <ul>
-                        <li>Certified Scrum Master</li>
-                        <li>Agile</li>
-                    </ul>
+                    <table class="skills-table">
+                        <thead class="visually-hidden">
+                        <tr>
+                            <th>Skill</th>
+                            <th>Proficiency level</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <p>Certified ScrumMaster</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Agile</p>
+                            </td>
+                            <td class="skills-table__level"><progress max="100" value="95">95%</progress></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -349,64 +739,217 @@
                 </div>
                 <div class="section__main">
 
+                    <table class="exp-table">
+                        <thead class="visually-hidden">
+                            <tr>
+                                <th>Location</th>
+                                <th>Detail</th>
+                                <th>Dates</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">
+                                    <h3 class="exp-table__place">BBC</h3>
+                                    <span class="text--subtle">London, 2008 - 2017</span>
+                                </td>
+                                <td>
+                                    <h4>Acting Technical Architect</h4>
+                                    <ul>
+                                        <li>
+                                            Designing AWS Architecture for projects to be built by third party suppliers.
+                                            (BBC Introducing &amp; BBC Music Events)
+                                        </li>
+                                        <li>
+                                            Domain modeling of Programme Metadata for Radio, Music &amp; Programmes
+                                        </li>
+                                        <li>
+                                            Consulting with third party suppliers on the BBC's technical infrastructure solutions.
+                                        </li>
+                                        <li>
+                                            Planning &amp; supporting migration of applications onto AWS
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="exp-table__date">2017</td>
+                            </tr>
+                            <tr>
 
-                    <h3>University of Bath</h3>
-                    <p><span class="text--subtle">2002 - 2005</span><br />
-                        BEng (Hons) 2:2 Electrical and Electronic Engineering - Accredited.</p>
+                                <td>
+                                    <h4>Senior/Principle Web Developer (Technical Lead)</h4>
+                                    <ul>
+                                        <li>
+                                            Technical lead for <a href="http://www.bbc.co.uk/programmes">BBC Programmes</a>,
+                                            a very large and high traffic PHP application.
+                                        </li>
+                                        <li>
+                                            Designing and implementing a strategy for moving to the cloud,
+                                            with particular emphasis on efficiency, resilience and continuous delivery
+                                        </li>
+                                        <li>Understanding of a large and complex data model</li>
+                                        <li>Accessibility Champion</li>
+                                        <li>Stakeholder support</li>
+                                        <li>Data migrations to allow strategic support for the future (e.g Podcasts / Blogs)</li>
+                                    </ul>
+                                </td>
+                                <td class="exp-table__date">2016</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Web Developer</h4>
+                                    <ul>
+                                        <li>Main developer of conversion of BBC Podcasts to PHP infrastructure</li>
+                                        <li>Responding to editorial stakeholder requirements to support on-air shows</li>
+                                        <li>Experimentation with projects such as Live SMS feeds and Events metadata</li>
+                                    </ul>
+                                </td>
+                                <td class="exp-table__date">2010</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="exp-table__place">Southampton City Council (Capita)</h3>
+                                    <span class="text--subtle">Southampton, 2007 - 2008</span>
+                                </td>
+
+                                <td>
+                                    <h4>Web Developer</h4>
+                                    <ul>
+                                        <li>Maintain and update council websites</li>
+                                        <li>Design and incorporate modern technologies into sites</li>
+                                        <li>Ensure sites adhere to strict government accessibility standards</li>
+                                        <li>Support and educate internal users of web systems / content management system</li>
+                                        <li>Develop internal ASP / ASP.NET applications from initial brief (for Libraries, and Parks)</li>
+                                    </ul>
+                                </td>
+                                <td class="exp-table__date">2008</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="exp-table__place">Bournemouth University</h3>
+                                    <span class="text--subtle">Bournemouth, 2006 - 2007</span>
+                                </td>
+
+                                <td>
+                                    <h4>MA with Merit, Post Production (Sound Design)</h4>
+                                <td class="exp-table__date">2007</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="exp-table__place">University of Bath</h3>
+                                    <span class="text--subtle">Bath, 2002 - 2005</span>
+                                </td>
+
+                                <td>
+                                    <h4>BEng (Hons) 2:2 Electrical and Electronic Engineering - Accredited</h4>
+                                <td class="exp-table__date">2005 <span class="exp-table__date-stop">2002</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
             <div class="section">
                 <div class="section__intro">
-                    <h2 id="portfolio">Portfolio</h2>
+                    <h2 id="box-link-list">Portfolio</h2>
                 </div>
                 <div class="section__main">
                     <h3>Projects &amp; Websites</h3>
-                    <ul>
+                    <ul class="box-link-list">
                         <li>
-                            <h4><a href="https://www.isinanalytics.com/">ISIN Analytics</a></h4>
-                            <p>Structured pages for the finance markets,
-                with a page for every <abbr title="International Securities Identification Number">ISIN</abbr>
-                            </p>
+                            <a href="https://www.isinanalytics.com/">
+                                <div>
+                                <h4>ISIN Analytics</h4>
+                                <p>Structured pages for the finance markets,
+                    with a page for every <abbr title="International Securities Identification Number">ISIN</abbr>
+                                </p>
+                                </div>
+                            </a>
                         </li>
                         <li>
-                            <h4><a href="https://tubealert.co.uk/">Tube Alert</a></h4>
-                            <p>Progressively enhanced web application for the tube status,
-                                    with offline mode and push notifications
-                            </p>
+                            <a href="https://tubealert.co.uk/">
+                                <div>
+                                <h4>Tube Alert</h4>
+                                <p>Progressively enhanced web application for the tube status,
+                                        with offline mode and push notifications
+                                </p>
+                                </div>
+                            </a>
                         </li>
 
                     </ul>
                     <h3>Articles</h3>
-                    <ul>
+                    <ul class="box-link-list">
                         <li>
-                            <h4>
-                                <a href="http://www.smashingmagazine.com/2014/05/02/responsive-design-begins-with-the-url/">
-                                    Responsive Design Begins With The URL
-                                </a>
-                            </h4>
-                            <p class="text--subtle">02 May 2014</p>
+                            <a href="http://www.smashingmagazine.com/2014/05/02/responsive-design-begins-with-the-url/">
+                                <div>
+                                <h4>Responsive Design Begins With The URL</h4>
+                                <p class="text--subtle">
+                                    02 May 2014 <br />
+                                    Smashing Magazine
+                                </p>
+                                </div>
+                            </a>
                         </li>
                         <li>
-                            <h4>
-                                <a href="http://www.bbc.co.uk/blogs/internet/posts/BBC-Programme-Pages-Content-Driven-Responsive-Redesign">
-                                    BBC Programme pages: content driven responsive redesign
-                                </a>
-                            </h4>
-                            <p class="text--subtle">27 February 2014</p>
+                            <a href="http://www.bbc.co.uk/blogs/internet/posts/BBC-Programme-Pages-Content-Driven-Responsive-Redesign">
+                                <div>
+                                <h4>BBC Programme pages: content driven responsive redesign</h4>
+                                <p class="text--subtle">
+                                    27 February 2014 <br />
+                                    BBC Internet Blog
+                                </p>
+                                </div>
+                            </a>
                         </li>
 
                     </ul>
                     <h3>Talks</h3>
-                    <ul>
+                    <ul class="box-link-list">
                         <li>
-                            <h4>
-                                <a href="http://www.techinsight.io/event/london-june-2014/">Tech Insight (June 2014)</a>
-                            </h4>
-                            <p>
-                                URLs Are Dead. Long Live URLs
-                                (<a href="https://docs.google.com/presentation/d/1TiOch-DYRv2F7t-if5XMkEXqrK1pPB5k_R1-IQQTMtw/pub#slide=id.p">Slides</a>)
-                            </p></li>
+                            <a href="http://www.bbc.co.uk/academy/technology/Develop-BBC-2016/article/art20160107163958179">
+                                <div>
+                                <h4>
+                                    { develop: BBC }
+                                </h4>
+                                <p>
+                                    PHP: all grown up in the Radio Product Group
+                                </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.techinsight.io/event/london-june-2014/">
+                                <div>
+                                <h4>
+                                    Tech Insight (June 2014)
+                                </h4>
+                                <p>
+                                    URLs Are Dead. Long Live URLs
+                                </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <h3>Code</h3>
+                    <ul class="box-link-list">
+                        <li>
+                            <a href="https://github.com/djmarland">
+                                <div>
+                                    <h4>
+                                        Github
+                                    </h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://codepen.io/djmarland">
+                                <div>
+                                    <h4>
+                                        Codepen
+                                    </h4>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -416,6 +959,37 @@
                     <h2 id="contact">Contact</h2>
                 </div>
                 <div class="section__main">
+                    <ul class="box-link-list">
+                        <li>
+                            <a href="mailto:davidm@rland.me.uk">
+                                <div>
+                                    <h4>
+                                        Email
+                                    </h4>
+                                    <p>davidm@rland.me.uk</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/djmarland">
+                                <div>
+                                    <h4>
+                                        Twitter
+                                    </h4>
+                                    <p>@djmarland</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://uk.linkedin.com/pub/david-marland/52/76/5b5">
+                                <div>
+                                    <h4>
+                                        LinkedIn
+                                    </h4>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

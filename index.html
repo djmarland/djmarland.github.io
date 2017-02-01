@@ -8,108 +8,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="msapplication-square150x150logo" content="/apple-touch-icon-precomposed.png" />
     <link rel="icon" sizes="196x196" href="/apple-touch-icon-precomposed.png" />
-    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200,400,700" rel="stylesheet" />
     <style>
         *,*:before,*:after {
             box-sizing: border-box;
         }
         body {
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
-            font-family: 'Slabo 27px', serif;
-            color: #444;
+            max-width: 1024px;
+            color: #828282;
+            font-family: 'Fira Sans Condensed', Helvetica, sans-serif;
+            background: #6a6b6b;
+        }
+        h1, h2, h3 {
+            color: #2c2e26;
+            font-weight: 200;
         }
         a,
         a:link {
-            color: #464;
+            color: #ffd42d;
+            font-weight: bold;
         }
         a:visited {
-            color: #664;
+            color: #ffd42d;
         }
         a:hover,
         a:active,
         a:focus {
-            color: #494;
+            color: #47494b;
         }
         .top {
-            background: #454;
-            color: #fff;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            width: 100%;
+            background: #41413e;
         }
-        .header__text {
+        .main {
+            width: 100%;
+            background: #fff;
+            padding: 32px;
+        }
+
+        .header {
+            background: #353333 url('pattern.jpg') 50% 50%;
+            background-size: cover;
+            padding: 10%;
+        }
+        @media (min-width: 48em) {
+            body {
+                padding: 64px 8px;
+                display: flex;
+            }
+            .top {
+                flex-basis: 30%;
+            }
+            .main {
+                flex-basis: 70%;
+            }
+            .header {
+                padding: 64px 0;
+            }
+        }
+        @media (min-height: 43.75em) {
+            .top__contents {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+            }
+        }
+        .profile-image {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 180px;
+            border-radius: 100%;
             display: block;
-            text-align: center;
-            font-size: 3rem;
-            padding: 16px 0 8px;
-            margin: 0;
+            border: solid 12px rgba(255,255,255,0.45);
         }
         .nav {
-            list-style: none;
-            margin: 0 0 16px 0;
             padding: 0;
-            text-align: center;
+            margin: 0;
+            list-style: none;
         }
-        .nav__item {
-            display: inline-block;
+        .nav__link {
+            display: block;
+            padding: 24px 32px;
+            text-align: right;
+            border-bottom: 1px solid #2c2e26;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#41413e), color-stop(100%,#383835));
+            background: -webkit-linear-gradient(top, #41413e 0%,#383835 100%);
+            background: linear-gradient(to bottom, #41413e 0%, #383835 100%);
         }
-        .nav__link,
         .nav__link:link,
         .nav__link:visited {
-            display: inline-block;
-            padding: 4px 8px;
-            color: #fff;
             text-decoration: none;
-            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: #d9dbdd;
         }
         .nav__link:hover,
         .nav__link:active,
-        .nav__link:focus {
-            color: #454;
-            background: #fff;
-        }
-        .main {
-            margin-top: 176px;
-        }
-        .wrap {
-            max-width: 1024px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 16px;
-            padding-right: 16px;
+        .nav__link:focus,
+        .nav__link--selected:link,
+        .nav__link--selected:visited {
+            background: #ffd42d;
+            color: #2a363a;
         }
 
-        .profile-image {
-            border-radius: 100% 50%;
+        .h1 {
+            margin: 0;
         }
+        .h1__head {
+            color: #2c2e26;
+            font-weight: 700;
+            font-size: 2.2rem;
+        }
+        .h1__sub {
+            font-weight: 200;
+            display: block;
+            font-size: 1.8rem;
+        }
+
         .section {
+            padding-bottom: 32px;
             margin-bottom: 32px;
-            display: flex;
+            border-bottom: solid 1px #ececec;
+        }
+        .section:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
         }
         .section__intro {
-            width: 332px;
-            flex: 0 0 332px;
-            display: inline-block;
-            padding-right: 32px;
-            text-align: right;
-            vertical-align: top;
+            margin-bottom: 16px;
         }
-        .section__intro h2:before {
+        .section .section__intro h2 {
+            margin: 0;
+        }
+        .section__intro:after {
+            content: "";
+            padding-top: 16px;
+            border-bottom: solid 2px #ffd42d;
+            width: 120px;
             display: block;
-            content: " ";
-            margin-top: -160px;
-            height: 160px;
-            visibility: hidden;
-        }
-        .section__main {
-            display: inline-block;
-            padding-left: 32px;
-            border-left: solid 1px #ccc;
-            vertical-align: top;
         }
 
+
+        .visually-hidden {
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            height: 1px; width: 1px;
+            margin: -1px; padding: 0; border: 0;
+        }
         .prose h2 {
             font-size: 2rem;
             margin: 0 0 16px;
@@ -127,31 +175,41 @@
             line-height: 1.4;
             margin: 0 0 16px;
         }
+        .prose p:last-child {
+            margin-bottom: 0;
+        }
         .prose ul {
             font-size: 1.2rem;
             margin: 0 0 16px;
-            padding: 0 0 0 16px;
+            padding: 0 0 0 32px;
             list-style: square;
         }
         .text--subtle {
             color: #999;
         }
+
+        .start-date {
+            border-bottom: solid 2px #ffd42d;
+            animation: 5s PULSE ease-in-out infinite;
+            float: right;
+        }
+
+        @keyframes PULSE {
+            50% {
+                border-bottom-color: #2c383c;
+            }
+        }
     </style>
 </head>
 <body>
 <div class="top">
-    <header>
-    <div class="header">
-        <div class="wrap">
-            <h1 class="header__text">David Jonathan Marland</h1>
-        </div>
-    </div>
-</header>
-<nav>
-    <div class="wrap">
-    <ul class="nav">
+    <div class="top__contents">
+    <div class="header"><header>
+        <img src="profile-alt.jpg" class="profile-image" alt="David Jonathan Marland" />
+    </header></div>
+    <nav><ul class="nav">
         <li class="nav__item">
-            <a class="nav__link" href="#profile">Profile</a>
+            <a class="nav__link nav__link--selected" href="#profile">Profile</a>
         </li>
         <li class="nav__item">
             <a class="nav__link" href="#skills">Skills</a>
@@ -165,19 +223,27 @@
         <li class="nav__item">
             <a class="nav__link" href="#contact">Contact</a>
         </li>
-    </ul>
+    </ul></nav>
     </div>
-</nav>
 </div>
-<main>
-    <div class="main">
-        <div class="wrap prose">
+<div class="main">
+    <main>
+        <div class="prose">
             <div class="section">
                 <div class="section__intro">
+                    <h1 class="h1">
+                        <span class="h1__head">David Jonathan Marland</span>
+                        <span class="h1__sub">Semantic, progressive, responsive and responsible Web developer</span>
+                    </h1>
+                </div>
+                <div class="section__intro visually-hidden">
                     <h2 id="profile">Profile</h2>
-                    <img class="profile-image" src="profile.jpg" alt="Photo of David Marland" />
                 </div>
                 <div class="section__main">
+                    <p>
+                        <strong>Available for contract work starting: </strong>
+                        <span class="start-date">10th April 2017</span>
+                    </p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
                     <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
                 </div>
@@ -191,7 +257,13 @@
                     <h3>Web</h3>
                     <ul>
                         <li>HTML5</li>
-                        <li>CSS & Sass (SCSS)</li>
+                        <li>CSS & Sass (SCSS)
+                            <ul>
+                                <li>BEM</li>
+                                <li>Styleguides</li>
+                                <li>Components &amp; Atomic design</li>
+                            </ul>
+                        </li>
                         <li>URL Design</li>
                         <li>Progressive Enhancement</li>
                         <li>Responsive Web Design</li>
@@ -203,14 +275,18 @@
                     <h3>JavaScript</h3>
                     <ul>
                         <li>Vanilla JavaScript</li>
-                        <li>ES6 & Babel</li>
+                        <li>jQuery</li>
+                        <li>ES6 & Babel (Class structure)</li>
                         <li>React Components</li>
+                        <li>Universal/Isomorphic React (Server side rendering)</li>
                         <li>Node.js
                             <ul>
                                 <li>Express</li>
                                 <li>Sequelize</li>
                                 <li>Grunt</li>
                                 <li>Gulp</li>
+                                <li>Webpack</li>
+                                <li>NPM / Yarn</li>
                             </ul>
                         </li>
                     </ul>
@@ -218,12 +294,15 @@
                     <ul>
                         <li>PHP 7.1</li>
                         <li>Full Object-Oriented modern vanilla PHP</li>
+                        <li>PSR Standards</li>
                         <li>Symfony 3</li>
                         <li>Silex</li>
+                        <li>Laravel</li>
                         <li>Doctrine and SQL</li>
                         <li>Domain Driven Design</li>
                         <li>Service oriented architecture</li>
                         <li>MVC</li>
+                        <li>Interfaces & Presenters</li>
                         <li>Dependency Injection</li>
                         <li>Unit testing</li>
                     </ul>
@@ -238,12 +317,19 @@
                                 <li>SQS</li>
                                 <li>Cloudwatch</li>
                                 <li>SNS</li>
+                                <li>Cloudformation &amp; Troposphere</li>
                             </ul>
                         </li>
                     </ul>
-                    <h3>Software</h3>
+                    <h3>Dev &amp; Deployment</h3>
                     <ul>
                         <li>Source control with git &amp; Github</li>
+                        <li>Jenkins</li>
+                        <li>Docker</li>
+                        <li>Vagrant</li>
+                    </ul>
+                    <h3>Software</h3>
+                    <ul>
                         <li>Adobe Photoshop</li>
                         <li>Adobe Illustrator</li>
                         <li>Microsoft Office Suite</li>
@@ -333,10 +419,30 @@
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
+</div>
 
+<script>
+    (function() {
+        if (document.querySelectorAll && window.addEventListener) {
+            const links = document.querySelectorAll('.nav__link');
+            const len = links.length;
+            const selectedClass = 'nav__link--selected';
+            for (let i = 0; i < len; i++) {
+                links[i].addEventListener('click', function(ev) {
+                    navClicked(ev.target);
+                });
+            }
 
+            function navClicked(item) {
+                for (let i = 0; i < len; i++) {
+                    links[i].classList.remove(selectedClass);
+                }
+                item.classList.add(selectedClass);
+            }
+        }
+    })();
+</script>
 <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

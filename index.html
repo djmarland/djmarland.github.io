@@ -46,7 +46,12 @@
         .main {
             width: 100%;
             background: #fff;
-            padding: 32px;
+            padding: 32px 16px;
+        }
+        @media (min-width: 37.5em) {
+            .main {
+                padding: 32px;
+            }
         }
 
         .header {
@@ -180,6 +185,7 @@
             margin: 0;
         }
         .prose p {
+            clear: both;
             font-size: 1rem;
             line-height: 1.4;
             margin: 0 0 16px;
@@ -188,7 +194,8 @@
         .prose ul {
             font-size: 1rem;
             margin: 0 0 16px;
-            padding: 0 0 0 32px;
+            padding: 0 0 0 16px;
+            line-height: 1.4;
             list-style: square;
         }
         .prose p:last-child,
@@ -283,6 +290,25 @@
         }
         .exp-table h4 {
             font-size: 1rem;
+        }
+        @media (max-width: 32.5em) {
+            .exp-table td {
+                display: block;
+            }
+            .exp-table tr:not(:first-child) td:first-child {
+                border-top: solid 1px #6a6b6b;
+            }
+            .skills-table__level {
+                display: none;
+            }
+        }
+        @media (max-width: 43.75em) {
+            .exp-table .exp-table__date {
+                display: none;
+            }
+            .skills-table__level {
+                width: 60px;
+            }
         }
 
         .box-link-list.box-link-list  {
@@ -750,6 +776,26 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td>
+                                    <h3 class="exp-table__place">ISIN Analytics</h3>
+                                    <span class="text--subtle">Ongoing</span>
+                                </td>
+                                <td>
+                                    <h4>Lead Developer &amp; CTO</h4>
+                                    <ul>
+                                        <li>
+                                            Design and build front end <a href="https://www.isinanalytics.com">website</a>
+                                            for financial data, using PHP 7, Symfony 3, MySQL, OAuth integration and
+                                            ChartJS for visualisation
+                                        </li>
+                                        <li>
+                                            Build Admin backend using React for efficient data entry workflows
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="exp-table__date">&nbsp;</td>
+                            </tr>
+                            <tr>
                                 <td rowspan="3">
                                     <h3 class="exp-table__place">BBC</h3>
                                     <span class="text--subtle">London, 2008 - 2017</span>
@@ -757,6 +803,12 @@
                                 <td>
                                     <h4>Acting Technical Architect / Principle Software Engineer</h4>
                                     <ul>
+                                        <li>
+                                            Working with the team to develop an AWS architecture for BBC Programmes
+                                            utilising SQS Queues and RDS Aurora in a Devops environment.
+                                            Large application split into Microservices built with PHP 7.1 and Symfony 3.
+                                            Using PHPUnit, CodeSniffer, Github, pull requests and Jenkins CI for continuous delivery
+                                        </li>
                                         <li>
                                             Designing AWS Architecture for projects to be built by third party suppliers.
                                             (<a href="https://www.bbc.co.uk/introducing">BBC Introducing</a> &amp;
@@ -786,7 +838,14 @@
                                     <ul>
                                         <li>
                                             Technical lead for <a href="http://www.bbc.co.uk/programmes">BBC Programmes</a>,
-                                            a very large and high traffic PHP application.
+                                            a very large and high traffic PHP application built using Zend 1,
+                                            and handling millions of programmes (nominated for a Webby Award in 2015)
+                                        </li>
+                                        <li>
+                                            Technical lead for <a href="http://www.bbc.co.uk/blogs">BBC Blogs</a>,
+                                            built using PHP and Zend 1, but with a framework agnostic PHP model layer
+                                            using service oriented architecture. By remaining framework agnostic it is
+                                            future proof for imminent migration to more modern infrastructure.
                                         </li>
                                         <li>
                                             Designing and implementing a strategy for moving to the cloud,
@@ -945,7 +1004,16 @@
                             <a href="https://github.com/djmarland">
                                 <div>
                                     <h4>
-                                        Github
+                                        Github (personal)
+                                    </h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/hammerspacecouk">
+                                <div>
+                                    <h4>
+                                        Github (hammerspace)
                                     </h4>
                                 </div>
                             </a>

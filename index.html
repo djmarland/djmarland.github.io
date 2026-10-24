@@ -4,1109 +4,440 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>David Jonathan Marland, Full Stack Web developer and Software engineer</title>
-    <meta name="description" content="Semantic, progressive, responsive and responsible Web developer with skills in HTML, CSS, JavaScript &amp; PHP">
+    <meta name="description"
+          content="Semantic, progressive, responsive and responsible Web developer with skills in HTML, CSS, JavaScript &amp; PHP">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="msapplication-square150x150logo" content="/apple-touch-icon-precomposed.png" />
+    <meta name="msapplication-square150x150logo" content="/apple-touch-icon-precomposed.png"/>
     <meta name="theme-color" content="#ffd42d">
-    <link rel="icon" sizes="196x196" href="/apple-touch-icon-precomposed.png" />
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200,400,700" rel="stylesheet" />
+    <link rel="icon" sizes="196x196" href="/apple-touch-icon-precomposed.png"/>
+    <link rel="preload" href="/fonts/fira-sans-condensed-latin-400-normal.woff2" as="font" type="font/woff2"
+          crossorigin/>
     <style>
-        *,*:before,*:after {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0 auto;
-            padding: 0;
-            max-width: 1120px;
-            color: #828282;
-            font-family: 'Fira Sans Condensed', Helvetica, sans-serif;
-            background: #6a6b6b;
-        }
-        h1, h2, h3 {
-            color: #2c2e26;
-            font-weight: 200;
-        }
-        a,
-        a:link {
-            color: #47494b;
-            font-weight: bold;
-        }
-        a:visited {
-            color: #47494b;
-        }
-        a:hover,
-        a:active,
-        a:focus {
-            color: #ffd42d;
-        }
-        .top {
-            width: 100%;
-            background: #41413e;
-        }
-        .main {
-            width: 100%;
-            background: #fff;
-            padding: 32px 16px;
-        }
-        @media (min-width: 37.5em) {
-            .main {
-                padding: 32px;
-            }
-        }
+			@font-face {
+				font-family: 'Fira Sans Condensed';
+				font-style: normal;
+				font-weight: 200;
+				font-display: swap;
+				src: url('/fonts/fira-sans-condensed-latin-200-normal.woff2') format('woff2');
+			}
 
-        .header {
-            background: #353333 url('pattern.jpg') 50% 50%;
-            background-size: cover;
-            padding: 10%;
-        }
-        @media (min-width: 63em) {
-            body {
-                padding: 64px 8px;
-                display: flex;
-            }
-            .top {
-                flex-basis: 30%;
-            }
-            .main {
-                flex-basis: 70%;
-            }
-            .header {
-                padding: 64px 0;
-            }
-        }
-        @media (min-width: 70em) {
-            .top {
-                flex-basis: 25%;
-            }
-            .main {
-                flex-basis: 75%;
-            }
-        }
-        @media (min-height: 43.75em) {
-            .top__contents {
-                position: -webkit-sticky;
-                position: sticky;
-                top: 0;
-            }
-        }
-        .profile-image {
-            margin: 0 auto;
-            width: 100%;
-            max-width: 180px;
-            border-radius: 100%;
-            display: block;
-            border: solid 12px rgba(255,255,255,0.45);
-        }
-        .nav {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-        .nav__link {
-            display: block;
-            padding: 24px 32px;
-            text-align: right;
-            border-bottom: 1px solid #2c2e26;
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#41413e), color-stop(100%,#383835));
-            background: -webkit-linear-gradient(top, #41413e 0%,#383835 100%);
-            background: linear-gradient(to bottom, #41413e 0%, #383835 100%);
-        }
-        .nav__link:link,
-        .nav__link:visited {
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 1.2rem;
-            color: #d9dbdd;
-        }
-        .nav__link:hover,
-        .nav__link:active,
-        .nav__link:focus,
-        .nav__link--selected:link,
-        .nav__link--selected:visited {
-            background: #ffd42d;
-            color: #2a363a;
-        }
+			@font-face {
+				font-family: 'Fira Sans Condensed';
+				font-style: normal;
+				font-weight: 400;
+				font-display: swap;
+				src: url('/fonts/fira-sans-condensed-latin-400-normal.woff2') format('woff2');
+			}
 
-        .h1 {
-            margin: 0;
-        }
-        .h1__head {
-            color: #2c2e26;
-            font-weight: 700;
-            font-size: 2.2rem;
-        }
-        .h1__sub {
-            font-weight: 200;
-            display: block;
-            font-size: 1.8rem;
-        }
+			@font-face {
+				font-family: 'Fira Sans Condensed';
+				font-style: normal;
+				font-weight: 700;
+				font-display: swap;
+				src: url('/fonts/fira-sans-condensed-latin-700-normal.woff2') format('woff2');
+			}
 
-        .section {
-            padding-bottom: 32px;
-            margin-bottom: 32px;
-            border-bottom: solid 1px #ececec;
-        }
-        .section:last-child {
-            margin-bottom: 0;
-            border-bottom: none;
-        }
-        .section__intro {
-            margin-bottom: 16px;
-        }
-        .section .section__intro h2 {
-            margin: 0;
-        }
-        .section__intro:after {
-            content: "";
-            padding-top: 16px;
-            border-bottom: solid 2px #ffd42d;
-            width: 120px;
-            display: block;
-        }
+			*, *:before, *:after {
+				box-sizing: border-box;
+			}
+
+			:root {
+				color-scheme: light dark;
+				background: light-dark(oklch(0.94 0.006 95), oklch(0.19 0.012 275));
+				--step--2: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
+				--step--1: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
+				--step-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+				--step-1: clamp(1.35rem, 1.2631rem + 0.3864vw, 1.5625rem);
+				--step-2: clamp(1.62rem, 1.4837rem + 0.6057vw, 1.9531rem);
+				--step-3: clamp(1.944rem, 1.7405rem + 0.9044vw, 2.4414rem);
+				--step-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
+				--step-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
+			}
+
+			body {
+				margin: 0 auto;
+				padding: 32px;
+				display: grid;
+				place-items: center;
+				color: light-dark(#1e1e1e, #cacaca);
+				font-family: 'Fira Sans Condensed', Helvetica, sans-serif;
+				text-align: center;
+				min-height: 100dvh;
+			}
+
+			.profile-image {
+				width: 100%;
+				border-radius: 50%;
+				max-width: 240px;
+				border: solid 1px currentColor;
+			}
+
+			@property --blob {
+				syntax: '<angle>';
+				inherits: false;
+				initial-value: 0deg;
+			}
+			/* 1 is a full wobble, 0 is a perfect circle */
+			@property --wobble {
+				syntax: '<number>';
+				inherits: false;
+				initial-value: 1;
+			}
+
+			/* A blob with four anchors (top, right, bottom, left) whose distance from the
+			   centre (--r) and curve handle length (--k) drift as --blob goes round.
+			   Only whole multiples of --blob are used, so the loop is seamless. */
+			@supports (clip-path: shape(from 0 0, line to 0 0)) {
+				.profile-image {
+					border: 0;
+					--r1: calc(1 - var(--wobble) * (0.09 - 0.09 * sin(var(--blob))));
+					--r2: calc(1 - var(--wobble) * (0.09 - 0.09 * sin(var(--blob) * 2 + 90deg)));
+					--r3: calc(1 - var(--wobble) * (0.09 - 0.09 * cos(var(--blob) + 200deg)));
+					--r4: calc(1 - var(--wobble) * (0.09 - 0.09 * sin(var(--blob) * 3 + 300deg)));
+					/* 0.5523 makes a quarter circle from a cubic curve */
+					--k1: calc(0.5523 * (1 + var(--wobble) * 0.25 * cos(var(--blob) * 2)));
+					--k2: calc(0.5523 * (1 + var(--wobble) * 0.25 * sin(var(--blob) + 45deg)));
+					--k3: calc(0.5523 * (1 + var(--wobble) * 0.25 * cos(var(--blob) * 3 + 120deg)));
+					--k4: calc(0.5523 * (1 + var(--wobble) * 0.25 * sin(var(--blob) * 2 + 250deg)));
+					clip-path: shape(
+						from 50% calc(50% - 50% * var(--r1)),
+						curve to calc(50% + 50% * var(--r2)) 50%
+							with calc(50% + 50% * var(--r1) * var(--k1)) calc(50% - 50% * var(--r1))
+							/ calc(50% + 50% * var(--r2)) calc(50% - 50% * var(--r2) * var(--k2)),
+						curve to 50% calc(50% + 50% * var(--r3))
+							with calc(50% + 50% * var(--r2)) calc(50% + 50% * var(--r2) * var(--k2))
+							/ calc(50% + 50% * var(--r3) * var(--k3)) calc(50% + 50% * var(--r3)),
+						curve to calc(50% - 50% * var(--r4)) 50%
+							with calc(50% - 50% * var(--r3) * var(--k3)) calc(50% + 50% * var(--r3))
+							/ calc(50% - 50% * var(--r4)) calc(50% + 50% * var(--r4) * var(--k4)),
+						curve to 50% calc(50% - 50% * var(--r1))
+							with calc(50% - 50% * var(--r4)) calc(50% - 50% * var(--r4) * var(--k4))
+							/ calc(50% - 50% * var(--r1) * var(--k1)) calc(50% - 50% * var(--r1)),
+						close
+					);
+					animation: blob-morph 18s linear infinite;
+					transition: --wobble 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+
+					&:hover {
+						--wobble: 0;
+					}
+				}
+			}
+
+			@keyframes blob-morph {
+				to {
+					--blob: 360deg;
+				}
+			}
+
+			.main-heading {
+				font-size: var(--step-4);
+			}
+
+			.sub-heading {
+				display: block;
+				font-size: var(--step-2);
+				font-weight: 300;
+			}
+
+			.social-links {
+				list-style: none;
+				padding: 0;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+				width: 100%;
+				min-width: 0;
+				max-width: 60rem;
+				--ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+				li {
+					flex: 1 1 min(100%, 16rem);
+					isolation: isolate;
+					animation: rise-in 600ms var(--ease) both;
+					animation-delay: 0ms;
+					animation-delay: calc(sibling-index() * 90ms);
+				}
+
+				/* dim the buttons you're not pointing at */
+				&:has(a:is(:hover, :focus-visible)) a:not(:hover, :focus-visible) {
+					opacity: 0.75;
+					filter: saturate(0.6);
+				}
+			}
+
+			@property --angle {
+				syntax: '<angle>';
+				inherits: true;
+				initial-value: 0deg;
+			}
+			@property --shine {
+				syntax: '<percentage>';
+				inherits: true;
+				initial-value: -30%;
+			}
+			/* how much the resting bevelled rim covers the hover one */
+			@property --rest {
+				syntax: '<number>';
+				inherits: true;
+				initial-value: 1;
+			}
+
+			.social-links a {
+				--hue: 95;
+				--c: oklch(var(--l, 0.86) 0.11 var(--hue));
+				/* a brushed-metal rim: two bright glints and two dark troughs */
+				--rim-light: light-dark(oklch(1 0 0), oklch(0.95 0 0));
+				--rim-dark: light-dark(oklch(0.45 0 0), oklch(0.3 0 0));
+				--rim: conic-gradient(from var(--angle) in oklab, var(--rim-light), var(--rim-dark) 25%, var(--rim-light) 50%, var(--rim-dark) 75%, var(--rim-light));
+				position: relative;
+				z-index: 0;
+				display: grid;
+				gap: 0.25rem;
+				height: 100%;
+				padding: 1.25rem 1rem;
+				border: 2px solid transparent;
+				border-radius: 16px;
+                corner-shape: scoop;
+				color: oklch(from var(--c) 0.25 calc(c * 0.6) h);
+				text-decoration: none;
+				box-shadow:
+					0 1px 2px oklch(from var(--c) calc(l - 0.5) c h / 0.15),
+					0 10px 24px -14px oklch(from var(--c) calc(l - 0.45) c h / 0.6);
+				animation: spin 3s linear infinite paused;
+				transition:
+					translate 300ms var(--ease),
+					box-shadow 300ms var(--ease),
+					opacity 300ms ease,
+					filter 300ms ease,
+					--rest 400ms ease;
+
+				&[href*="bsky"] {
+					--hue: 245;
+				}
+				&[href*="mastodon"] {
+					--hue: 290;
+				}
+
+				/* the button face, in a layer above the glow */
+				&::before {
+					content: '';
+					position: absolute;
+					inset: -2px;
+					z-index: -1;
+					border: inherit;
+					border-radius: inherit;
+                    corner-shape: inherit;
+					background:
+						/* the sweeping shine */
+						linear-gradient(110deg, transparent calc(var(--shine) - 12%), oklch(1 0 0 / 0.7) var(--shine), transparent calc(var(--shine) + 12%)) padding-box,
+						/* a soft sheen from above */
+						radial-gradient(130% 80% at 50% -20%, oklch(1 0 0 / 0.45), transparent 60%) padding-box,
+						/* the body, shifting slightly in hue top to bottom */
+						linear-gradient(to bottom in oklch, oklch(from var(--c) calc(l + 0.05) calc(c * 0.8) calc(h - 8)), oklch(from var(--c) calc(l - 0.05) c calc(h + 8))) padding-box,
+						/* a bevelled rim, light above and dark below, faded out on hover */
+						linear-gradient(to bottom, oklch(from var(--c) calc(l + 0.1) calc(c * 0.5) h / var(--rest)), oklch(from var(--c) calc(l - 0.15) c h / var(--rest))) border-box,
+						/* the hover rim, spinning */
+						var(--rim) border-box;
+					box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.5);
+				}
+
+				/* a blurred copy of the hover rim, glowing behind */
+				&::after {
+					content: '';
+					position: absolute;
+                    corner-shape: inherit;
+
+					inset: -2px;
+					z-index: -2;
+					border-radius: inherit;
+					background: var(--rim);
+					filter: blur(16px);
+					opacity: 0;
+					transition: opacity 400ms ease;
+				}
+
+				h2 {
+					margin: 0;
+					font-size: var(--step-2);
+					font-weight: 700;
+					letter-spacing: 0.01em;
+				}
+
+				p {
+					margin: 0;
+					font-size: var(--step--1);
+					opacity: 0.75;
+					overflow-wrap: anywhere;
+				}
+
+				&:is(:hover, :focus-visible) {
+					--shine: 130%;
+					--rest: 0;
+					translate: 0 -3px;
+					animation-play-state: running;
+					box-shadow:
+						0 1px 2px oklch(from var(--c) calc(l - 0.5) c h / 0.15),
+						0 18px 32px -16px oklch(from var(--c) calc(l - 0.45) c h / 0.7);
+					transition:
+						translate 300ms var(--ease),
+						box-shadow 300ms var(--ease),
+						opacity 300ms ease,
+						filter 300ms ease,
+						--rest 400ms ease,
+						--shine 800ms ease-out;
+
+					&::after {
+						opacity: 0.5;
+					}
+				}
+
+				&:focus-visible {
+					outline: 2px solid oklch(from var(--c) calc(l - 0.4) c h);
+					outline-offset: 4px;
+				}
+
+				&:active {
+					translate: 0 0;
+					transition-duration: 80ms;
+				}
+			}
+
+			@media (prefers-color-scheme: dark) {
+				.social-links a {
+					--l: 0.78;
+				}
+			}
+
+			@keyframes spin {
+				to {
+					--angle: 360deg;
+				}
+			}
+
+			@keyframes rise-in {
+				from {
+					opacity: 0;
+					translate: 0 1rem;
+				}
+			}
 
 
-        .visually-hidden {
-            position: absolute;
-            overflow: hidden;
-            clip: rect(0 0 0 0);
-            height: 1px; width: 1px;
-            margin: -1px; padding: 0; border: 0;
-        }
-        .prose h2 {
-            font-size: 2rem;
-            margin: 0 0 16px;
-        }
-        .prose h3 {
-            font-size: 1.6rem;
-            margin: 0 0 8px;
-        }
-        .prose h4 {
-            font-size: 1.2rem;
-            margin: 0;
-        }
-        .prose p {
-            clear: both;
-            font-size: 1rem;
-            line-height: 1.4;
-            margin: 0 0 16px;
-        }
+			/* Background: an animated mesh gradient (::before) with sweeping spotlight beams (::after) */
+			@property --t {
+				syntax: '<angle>';
+				inherits: false;
+				initial-value: 0deg;
+			}
 
-        .prose ul {
-            font-size: 1rem;
-            margin: 0 0 16px;
-            padding: 0 0 0 16px;
-            line-height: 1.4;
-            list-style: square;
-        }
-        .prose p:last-child,
-        .prose ul:last-child {
-            margin-bottom: 0;
-        }
-        .text--subtle {
-            opacity: 0.8;
-        }
+			body::before,
+			body::after {
+				content: '';
+				position: fixed;
+				pointer-events: none;
+			}
 
-        .start-date {
-            border-bottom: solid 2px #ffd42d;
-            animation: 5s PULSE ease-in-out infinite;
-            float: right;
-        }
+			body::before {
+				inset: 0;
+				z-index: -2;
+				/* hues drift gently as the blobs move */
+				--hy: calc(100 + 8 * sin(var(--t)));
+				--hg: calc(150 + 12 * cos(var(--t)));
+				--hp: calc(300 + 15 * sin(var(--t) * 2));
+				--yellow: light-dark(oklch(0.93 0.19 var(--hy) / 0.7), oklch(0.62 0.15 var(--hy) / 0.3));
+				--green: light-dark(oklch(0.87 0.2 var(--hg) / 0.5), oklch(0.5 0.15 var(--hg) / 0.4));
+				--purple: light-dark(oklch(0.78 0.14 var(--hp) / 0.4), oklch(0.42 0.19 var(--hp) / 0.45));
+				--spot: light-dark(oklch(1 0 0 / 0.8), oklch(0.85 0.04 100 / 0.1));
+				--vignette: light-dark(oklch(0.45 0.01 95 / 0.15), oklch(0.08 0.01 275 / 0.6));
+				background: /* film grain, to add texture and hide banding */ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 .05'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+				radial-gradient(ellipse 75% 75% at 50% 45% in oklab, transparent 55%, var(--vignette)),
+				radial-gradient(40vmax 30vmax at calc(50% + 20% * sin(var(--t))) calc(40% + 12% * sin(var(--t) * 3)) in oklab, var(--spot), transparent 70%),
+				radial-gradient(55vmax 45vmax at calc(20% + 15% * cos(var(--t))) calc(15% + 10% * sin(var(--t) * 2)) in oklab, var(--yellow), transparent 70%),
+				radial-gradient(50vmax 50vmax at calc(82% + 12% * sin(var(--t) + 60deg)) calc(25% + 15% * cos(var(--t))) in oklab, var(--green), transparent 70%),
+				radial-gradient(60vmax 45vmax at calc(70% + 18% * cos(var(--t) * 2 + 120deg)) calc(88% + 10% * sin(var(--t))) in oklab, var(--purple), transparent 70%),
+				radial-gradient(45vmax 40vmax at calc(12% + 12% * sin(var(--t) * 2)) calc(78% + 12% * cos(var(--t) + 200deg)) in oklab, var(--green), transparent 70%);
+				animation: mesh-drift 60s linear infinite;
+			}
 
-        @keyframes PULSE {
-            50% {
-                border-bottom-color: #2c383c;
-            }
-        }
+			body::after {
+				inset: -20% -20% 0;
+				z-index: -1;
+				--beam: light-dark(oklch(1 0.02 100 / 0.55), oklch(0.95 0.06 105 / 0.08));
+				background: radial-gradient(ellipse 14% 80% at 35% 0% in oklab, var(--beam), transparent 70%),
+				radial-gradient(ellipse 10% 70% at 62% 0% in oklab, var(--beam), transparent 70%);
+				transform-origin: 50% 0;
+				animation: beam-sway 23s ease-in-out infinite alternate;
+			}
 
-        .skills-table {
-            width: 100%;
-            margin-bottom: 32px;
-            border-spacing: 0;
-        }
-        .skills-table:last-child {
-            margin-bottom:0;
-        }
-        .skills-table tr:nth-child(odd) {
-            background: #f6f6f6;
-        }
-        .skills-table td {
-            padding: 8px;
-            margin: 0;
-            vertical-align: middle;
-        }
-        .skills-table__level {
-            width: 120px;
-        }
-        progress[value] {
-            -webkit-appearance: none;
-               -moz-appearance: none;
-                    appearance: none;
-            background-color: #6a6b6b;
-            color: #ffd42d;
-            width: 100%;
-            height: 16px;
-        }
-        progress[value]::-webkit-progress-bar {
-            background-color: #6a6b6b;
-        }
-        progress[value]::-webkit-progress-value {
-            background-color: #ffd42d;
-            border-top-right-radius: 1px;
-            border-bottom-right-radius: 1px;
-        }
-        progress[value]::-moz-progress-bar {
-            background-color: #ffd42d;
-            border-top-right-radius: 1px;
-            border-bottom-right-radius: 1px;
-        }
+			@keyframes mesh-drift {
+				to {
+					--t: 360deg;
+				}
+			}
 
-        .exp-table {
-            width: 100%;
-            border-spacing: 0;
-        }
-        .exp-table td {
-            vertical-align: top;
-            padding: 8px 8px 8px 0;
-        }
-        .exp-table .exp-table__place {
-            color: #2c2e26;
-            font-size: 1.2rem;
-            display: block;
-            margin: 0;
-        }
-        .exp-table .exp-table__date {
-            font-size: 0.8rem;
-            border-right: solid 16px #ffd42d;
-            padding-top: 0;
-            position: relative;
-        }
-        .exp-table__date-stop {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-        .exp-table tr:nth-child(even) .exp-table__date {
-            border-color: #6a6b6b;
-        }
-        .exp-table h4 {
-            font-size: 1rem;
-        }
-        @media (max-width: 32.5em) {
-            .exp-table td {
-                display: block;
-            }
-            .exp-table tr:not(:first-child) td:first-child {
-                border-top: solid 1px #6a6b6b;
-            }
-            .skills-table__level {
-                display: none;
-            }
-        }
-        @media (max-width: 43.75em) {
-            .exp-table .exp-table__date {
-                display: none;
-            }
-            .skills-table__level {
-                width: 60px;
-            }
-        }
+			@keyframes beam-sway {
+				from {
+					transform: rotate(-7deg);
+					opacity: 0.7;
+				}
+				50% {
+					opacity: 1;
+				}
+				to {
+					transform: rotate(7deg);
+					opacity: 0.8;
+				}
+			}
 
-        .box-link-list.box-link-list  {
-            list-style: none;
-            padding: 0;
-            margin-left: -16px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .box-link-list li {
-            margin-left: 16px;
-            margin-bottom: 16px;
-            min-width: 180px;
-            text-align: center;
-            display: flex;
-            flex: 1;
-        }
-        .box-link-list a {
-            width: 100%;
-            display: block;
-            display: flex;
-            align-items: center;
-            font-weight: normal;
-            text-decoration: none;
-            color: #41413e;
-            background: #ffd42d;
-            padding: 16px;
-        }
-        .box-link-list a:hover,
-        .box-link-list a:active,
-        .box-link-list a:focus {
-            color: #ffd42d;
-            background: #41413e;
-        }
-        .box-link-list a div {
-            width: 100%;
-        }
+			@media (prefers-reduced-motion: reduce) {
+				body::before,
+				body::after,
+				.profile-image,
+				.social-links li,
+				.social-links a {
+					animation: none !important;
+				}
+				.social-links a {
+					translate: none !important;
+				}
+			}
     </style>
 </head>
 <body>
-<div class="top">
-    <div class="top__contents">
-    <div class="header"><header>
-        <img src="profile-alt.jpg" class="profile-image" alt="David Jonathan Marland" />
-    </header></div>
-    <nav><ul class="nav">
-        <li class="nav__item">
-            <a class="nav__link nav__link--selected" href="#profile">Profile</a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#skills">Skills</a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#experience">Experience</a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#box-link-list">Portfolio</a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#contact">Contact</a>
-        </li>
-    </ul></nav>
-    </div>
-</div>
-<div class="main">
-    <main>
-        <div class="prose">
-            <div class="section">
-                <div class="section__intro">
-                    <h1 class="h1">
-                        <span class="h1__head">David Jonathan Marland</span>
-                        <span class="h1__sub">Semantic, progressive, responsive and responsible Full Stack Web Developer and Software Engineer</span>
-                    </h1>
-                </div>
-                <div class="section__intro visually-hidden">
-                    <h2 id="profile">Profile</h2>
-                </div>
-                <div class="section__main">
-                    <p>Not currently available for work</p>
-                    <!--<p>
-                        <strong>Available for contract work starting: </strong>
-                        <span class="start-date">10th April 2017</span>
-                    </p>-->
-                    <p>
-                        I am a senior web developer/software engineer open for opportunities to work on interesting web based projects.
-                        I believe in the core of the web, and seek to build web-friendly projects that are accessible to all.
-                    </p>
-                    <p>
-                        I have a particular affinity for Modern PHP (7.3+) using modern coding practices,
-                        though I am also proficient in Javascript with Node and React. I like to choose the right tool
-                        for the job.
-                    </p>
-                </div>
-            </div>
 
-            <div class="section">
-                <div class="section__intro">
-                    <h2 id="skills">Skills</h2>
-                </div>
-                <div class="section__main">
-                    <h3>Web <small class="text--subtle">(15 years)</small></h3>
-                    <table class="skills-table">
-                        <thead class="visually-hidden">
-                            <tr>
-                                <th>Skill</th>
-                                <th>Proficiency level</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <p>HTML</p>
-                                    <ul>
-                                        <li>HTML5, Semantic Markup &amp; W3C standards</li>
-                                        <li>SEO</li>
-                                        <li>Accessibility</li>
-                                        <li>Caching</li>
-                                    </ul>
-                                </td>
-                                <td class="skills-table__level"><progress max="100" value="95">95%</progress></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>CSS &amp; Sass (SCSS)</p>
-                                    <ul>
-                                        <li>BEM</li>
-                                        <li>Styleguides</li>
-                                        <li>Components &amp; Atomic design</li>
-                                        <li>Responsive Web Design</li>
-                                    </ul>
-                                </td>
-                                <td class="skills-table__level"><progress max="100" value="90">90%</progress></td>
-                            </tr>
-                            <tr>
-                                <td><p>URL Design</p></td>
-                                <td class="skills-table__level"><progress max="100" value="85">85%</progress></td>
-                            </tr>
-                            <tr>
-                                <td><p>Progressive Enhancement</p></td>
-                                <td class="skills-table__level"><progress max="100" value="95">95%</progress></td>
-                            </tr>
-                            <tr>
-                                <td><p>RESTful APIs</p></td>
-                                <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
-                            </tr>
-                        </tbody>
-                    </table>
 
-                    <h3>JavaScript <small class="text--subtle">(12 years)</small></h3>
-
-                    <table class="skills-table">
-                        <thead class="visually-hidden">
-                        <tr>
-                            <th>Skill</th>
-                            <th>Proficiency level</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <p>Vanilla JavaScript</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>jQuery</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>ES6 &amp; Babel (Class structure)</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="70">70%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>React Components</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="65">65%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Universal/Isomorphic React (Server side rendering)</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="65">65%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Node.js</p>
-                                <ul>
-                                    <li>Express</li>
-                                    <li>Sequelize</li>
-                                </ul>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="70">70%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Build tools</p>
-                                <ul>
-                                    <li>Grunt</li>
-                                    <li>Gulp</li>
-                                    <li>Webpack</li>
-                                    <li>NPM / Yarn</li>
-                                </ul>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="70">70%</progress></td>
-                        </tr>
-                        </tbody>
-                    </table>
-
-                    <h3>PHP <small class="text--subtle">(12 years)</small></h3>
-
-                    <table class="skills-table">
-                        <thead class="visually-hidden">
-                        <tr>
-                            <th>Skill</th>
-                            <th>Proficiency level</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <p>PHP 7.3+</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="92">92%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Full Object-Oriented modern vanilla PHP</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="92">92%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>PSR Standards</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Symfony 4</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="70">70%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Laravel</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="35">35%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Doctrine &amp; SQL</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Domain Driven Design</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="85">85%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Service Oriented Architecture</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>MVC</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="95">95%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Interfaces &amp; Presenters</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="90">90%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Dependency Injection</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="90">90%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Unit Testing</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
-                        </tr>
-                        </tbody>
-                    </table>
-
-                    <h3>Architecture &amp; Deployment</h3>
-
-                    <table class="skills-table">
-                        <thead class="visually-hidden">
-                        <tr>
-                            <th>Skill</th>
-                            <th>Proficiency level</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <p><strong>AWS</strong> EC2 &amp; Autoscaling</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="85">85%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>AWS</strong> Elastic Beanstalk</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>AWS</strong> RDS (MySQL, Postgres &amp; Aurora)</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>AWS</strong> SQS &amp; SNS</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="85">85%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>AWS</strong> Cloudwatch</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>AWS</strong> Cloudformation &amp; Troposphere</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="65">65%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Source control with Git &amp; Github</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="85">85%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>VPS &amp; SSH</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Jenkins (Continuous Integration)</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="80">80%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Docker</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="65">65%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Vagrant</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="68">68%</progress></td>
-                        </tr>
-                        </tbody>
-                    </table>
-
-                    <h3>Software</h3>
-
-                    <table class="skills-table">
-                        <thead class="visually-hidden">
-                        <tr>
-                            <th>Skill</th>
-                            <th>Proficiency level</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <p>Adobe Photoshop</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Adobe Illustrator</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="55">55%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>PHPStorm</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Microsoft Office Suite</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="97">97%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Windows, Mac &amp; Linux Operating Systems</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="97">97%</progress></td>
-                        </tr>
-                        </tbody>
-                    </table>
-
-                    <h3>Project management</h3>
-                    <table class="skills-table">
-                        <thead class="visually-hidden">
-                        <tr>
-                            <th>Skill</th>
-                            <th>Proficiency level</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <p>Certified ScrumMaster</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="75">75%</progress></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Agile</p>
-                            </td>
-                            <td class="skills-table__level"><progress max="100" value="95">95%</progress></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section__intro">
-                    <h2 id="experience">Experience</h2>
-                </div>
-                <div class="section__main">
-
-                    <table class="exp-table">
-                        <thead class="visually-hidden">
-                            <tr>
-                                <th>Location</th>
-                                <th>Detail</th>
-                                <th>Dates</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <h3 class="exp-table__place">ISIN Analytics</h3>
-                                    <span class="text--subtle">Ongoing</span>
-                                </td>
-                                <td>
-                                    <h4>Lead Developer &amp; CTO</h4>
-                                    <ul>
-                                        <li>
-                                            Design and build front end <a href="https://www.isinanalytics.com">website</a>
-                                            for financial data, using PHP 7, Symfony 3, MySQL, OAuth integration and
-                                            ChartJS for visualisation
-                                        </li>
-                                        <li>
-                                            Build Admin backend using React for efficient data entry workflows
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td class="exp-table__date">&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="3">
-                                    <h3 class="exp-table__place">BBC</h3>
-                                    <span class="text--subtle">London, 2008 - 2017</span>
-                                </td>
-                                <td>
-                                    <h4>Acting Technical Architect / Principle Software Engineer</h4>
-                                    <ul>
-                                        <li>
-                                            Working with the team to develop an AWS architecture for BBC Programmes
-                                            utilising SQS Queues and RDS Aurora in a Devops environment.
-                                            Large application split into Microservices built with PHP 7.1 and Symfony 3.
-                                            Using PHPUnit, CodeSniffer, Github, pull requests and Jenkins CI for continuous delivery
-                                        </li>
-                                        <li>
-                                            Designing AWS Architecture for projects to be built by third party suppliers.
-                                            (<a href="https://www.bbc.co.uk/introducing">BBC Introducing</a> &amp;
-                                            <a href="https://www.bbc.co.uk/glastonbury">BBC Music Events</a>)
-                                        </li>
-                                        <li>
-                                            Domain modeling of Programme Metadata for
-                                            <a href="https://www.bbc.co.uk/radio">Radio</a>,
-                                            <a href="https://www.bbc.co.uk/music">Music</a> &amp;
-                                            <a href="https://www.bbc.co.uk/programmes">Programmes</a>
-                                        </li>
-                                        <li>
-                                            Consulting with third party suppliers on the BBC's technical infrastructure solutions.
-                                        </li>
-                                        <li>
-                                            Planning &amp; supporting migration of applications onto AWS (including
-                                            <a href="https://www.bbc.co.uk/podcasts">BBC Podcasts</a>)
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td class="exp-table__date">2017</td>
-                            </tr>
-                            <tr>
-
-                                <td>
-                                    <h4>Senior/Principal Web Developer (Technical Lead)</h4>
-                                    <ul>
-                                        <li>
-                                            Technical lead for <a href="http://www.bbc.co.uk/programmes">BBC Programmes</a>,
-                                            a very large and high traffic PHP application built using Zend 1,
-                                            and handling millions of programmes (nominated for a Webby Award in 2015)
-                                        </li>
-                                        <li>
-                                            Technical lead for <a href="http://www.bbc.co.uk/blogs">BBC Blogs</a>,
-                                            built using PHP and Zend 1, but with a framework agnostic PHP model layer
-                                            using service oriented architecture. By remaining framework agnostic it is
-                                            future proof for imminent migration to more modern infrastructure.
-                                        </li>
-                                        <li>
-                                            Designing and implementing a strategy for moving to the cloud,
-                                            with particular emphasis on efficiency, resilience and continuous delivery
-                                        </li>
-                                        <li>Understanding of a large and complex data model</li>
-                                        <li>Accessibility Champion</li>
-                                        <li>Stakeholder support</li>
-                                        <li>Data migrations to allow strategic support for the future (e.g
-                                            <a href="https://www.bbc.co.uk/podcasts">Podcasts</a> /
-                                            <a href="https://www.bbc.co.uk/blogs">Blogs</a>)</li>
-                                    </ul>
-                                </td>
-                                <td class="exp-table__date">2016</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Web Developer</h4>
-                                    <ul>
-                                        <li>Main developer of conversion of <a href="https://www.bbc.co.uk/podcasts">BBC Podcasts</a>
-                                            to PHP infrastructure</li>
-                                        <li>Responding to editorial stakeholder requirements to support on-air shows</li>
-                                        <li>Experimentation with projects such as Live SMS feeds and Events metadata</li>
-                                    </ul>
-                                </td>
-                                <td class="exp-table__date">2010</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="exp-table__place">Southampton City Council (Capita)</h3>
-                                    <span class="text--subtle">Southampton, 2007 - 2008</span>
-                                </td>
-
-                                <td>
-                                    <h4>Web Developer</h4>
-                                    <ul>
-                                        <li>Maintain and update <a href="http://www.southampton.gov.uk/">council</a> websites</li>
-                                        <li>Design and incorporate modern technologies into sites</li>
-                                        <li>Ensure sites adhere to strict government accessibility standards</li>
-                                        <li>Support and educate internal users of web systems / content management system</li>
-                                        <li>Develop internal ASP / ASP.NET applications from initial brief (for Libraries, and Parks)</li>
-                                    </ul>
-                                </td>
-                                <td class="exp-table__date">2008</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="exp-table__place">Bournemouth University</h3>
-                                    <span class="text--subtle">Bournemouth, 2006 - 2007</span>
-                                </td>
-
-                                <td>
-                                    <h4>MA with Merit, Post Production (Sound Design)</h4>
-                                <td class="exp-table__date">2007</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="exp-table__place">University of Bath</h3>
-                                    <span class="text--subtle">Bath, 2002 - 2005</span>
-                                </td>
-
-                                <td>
-                                    <h4>BEng (Hons) 2:2 Electrical and Electronic Engineering - Accredited</h4>
-                                <td class="exp-table__date">2005 <span class="exp-table__date-stop">2002</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section__intro">
-                    <h2 id="box-link-list">Portfolio</h2>
-                </div>
-                <div class="section__main">
-                    <h3>Personal Projects &amp; Websites</h3>
-                    <ul class="box-link-list">
-                        <li>
-                            <a href="https://www.isinanalytics.com/">
-                                <div>
-                                <h4>ISIN Analytics</h4>
-                                <p>Structured pages for the finance markets,
-                    with a page for every <abbr title="International Securities Identification Number">ISIN</abbr>
-                                </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://tubealert.co.uk/">
-                                <div>
-                                <h4>Tube Alert</h4>
-                                <p>Progressively enhanced web application for the tube status,
-                                        with offline mode and push notifications
-                                </p>
-                                </div>
-                            </a>
-                        </li>
-
-                    </ul>
-                    <h3>Articles</h3>
-                    <ul class="box-link-list">
-                        <li>
-                            <a href="http://www.smashingmagazine.com/2014/05/02/responsive-design-begins-with-the-url/">
-                                <div>
-                                <h4>Responsive Design Begins With The URL</h4>
-                                <p class="text--subtle">
-                                    02 May 2014 <br />
-                                    Smashing Magazine
-                                </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.bbc.co.uk/blogs/internet/posts/BBC-Programme-Pages-Content-Driven-Responsive-Redesign">
-                                <div>
-                                <h4>BBC Programme pages: content driven responsive redesign</h4>
-                                <p class="text--subtle">
-                                    27 February 2014 <br />
-                                    BBC Internet Blog
-                                </p>
-                                </div>
-                            </a>
-                        </li>
-
-                    </ul>
-                    <h3>Talks</h3>
-                    <ul class="box-link-list">
-                        <li>
-                            <a href="https://www.bbc.co.uk/webarchive/https%3A%2F%2Fwww.bbc.co.uk%2Fblogs%2Finternet%2Fentries%2F5c236ed9-5895-366b-8f26-f46961274b04">
-                                <div>
-                                <h4>
-                                    { develop: BBC }
-                                </h4>
-                                <p>
-                                    PHP: all grown up in the Radio Product Group
-                                </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.techinsight.io/event/london-june-2014/">
-                                <div>
-                                <h4>
-                                    Tech Insight (June 2014)
-                                </h4>
-                                <p>
-                                    URLs Are Dead. Long Live URLs
-                                </p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <h3>Code</h3>
-                    <ul class="box-link-list">
-                        <li>
-                            <a href="https://github.com/djmarland">
-                                <div>
-                                    <h4>
-                                        Github (personal)
-                                    </h4>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/hammerspacecouk">
-                                <div>
-                                    <h4>
-                                        Github (hammerspace)
-                                    </h4>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://codepen.io/djmarland">
-                                <div>
-                                    <h4>
-                                        Codepen
-                                    </h4>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section__intro">
-                    <h2 id="contact">Contact</h2>
-                </div>
-                <div class="section__main">
-                    <ul class="box-link-list">
-                        <li>
-                            <a href="mailto:davidm@rland.me.uk">
-                                <div>
-                                    <h4>
-                                        Email
-                                    </h4>
-                                    <p>davidm@rland.me.uk</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a rel="me" href="https://twitter.com/djmarland">
-                                <div>
-                                    <h4>
-                                        Twitter
-                                    </h4>
-                                    <p>@djmarland</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a rel="me" href="https://mastodonapp.uk/@djmarland">
-                                <div>
-                                    <h4>
-                                        Mastodon
-                                    </h4>
-                                    <p>@djmarland</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://uk.linkedin.com/pub/david-marland/52/76/5b5">
-                                <div>
-                                    <h4>
-                                        LinkedIn
-                                    </h4>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
-</div>
-
-<script>
-    (function() {
-        if (document.querySelectorAll && window.addEventListener) {
-            const links = document.querySelectorAll('.nav__link');
-            const len = links.length;
-            const selectedClass = 'nav__link--selected';
-            for (let i = 0; i < len; i++) {
-                links[i].addEventListener('click', function(ev) {
-                    navClicked(ev.target);
-                });
-            }
-
-            function navClicked(item) {
-                for (let i = 0; i < len; i++) {
-                    links[i].classList.remove(selectedClass);
-                }
-                item.classList.add(selectedClass);
-            }
-        }
-    })();
-</script>
-<script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-24417125-1');ga('send','pageview');
-</script>
+<img src="profile-alt.jpg" class="profile-image" alt="David Jonathan Marland"/>
+<h1>
+    <span class="main-heading">David Jonathan Marland</span>
+    <span class="sub-heading">Semantic, progressive, responsive and responsible Full Stack Web Developer and Software Engineer</span>
+</h1>
+<ul class="social-links">
+    <li>
+        <a rel="me" href="https://www.hammerspace.co.uk">
+            <h2>
+                Blog
+            </h2>
+            <p>hammerspace.co.uk</p>
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://bsky.app/profile/djmarland.hammerspace.co.uk">
+            <h2>
+                Bluesky
+            </h2>
+            <p>@djmarland.hammerspace.co.uk</p>
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://mastodonapp.uk/@djmarland">
+            <h2>
+                Mastodon
+            </h2>
+            <p>@djmarland</p>
+        </a>
+    </li>
+</ul>
+<p>Not currently available for work</p>
 </body>
 </html>
 
